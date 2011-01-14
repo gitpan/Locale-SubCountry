@@ -1,5 +1,7 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.43 14 Jan 2011
+    Fixed the number of tests in main.t, should be 17, not 15
 
 1.42 13 Jan 2011
     Changed name of UK region St. Helens to Saint Helens, fix for RT bug 38599

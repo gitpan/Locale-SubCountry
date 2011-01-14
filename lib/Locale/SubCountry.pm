@@ -55,7 +55,7 @@ Locale::SubCountry - convert state, province, county etc. names to/from code
 
 This module allows you to convert the full name for a countries administrative
 region to the code commonly used for postal addressing. The reverse lookup
-can also be done.  Sub country codes are defined in "ISO 3166-2:1998,
+can also be done. Sub country codes are defined in "ISO 3166-2:1998,
 Codes for the representation of names of countries and their subdivisions".
 
 Sub countries are termed as states in the US and Australia, provinces
@@ -373,7 +373,7 @@ sub all_codes
 
 package Locale::SubCountry;
 
-our $VERSION = '1.42';
+our $VERSION = '1.43';
 
 
 #-------------------------------------------------------------------------------
