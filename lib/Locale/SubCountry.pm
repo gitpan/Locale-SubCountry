@@ -300,8 +300,8 @@ TJ Mather supplied the FIPS codes and many ammendments to the sub country data
 Copyright (c) 2011 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.4 or,
-at your option, any later version of Perl 5 you may have available.
+it under the same terms as Perl itself.
+
 
 
 =cut
@@ -312,7 +312,7 @@ use strict;
 use warnings;
 use locale;
 use Exporter;
-use Locale::SubCountryData;
+use Locale::SubCountry::Data;
 
 #-------------------------------------------------------------------------------
 
@@ -320,7 +320,7 @@ package Locale::SubCountry::World;
 
 # Define all the methods for the 'world' class here. Note that because the 
 # name space inherits from the Locale::SubCountry name space, the
-# package wide variables $::country_lookup and $::subcountry_lookup are
+# package wide variables $::country_lookup and $Locale::SubCountry::subcountry_lookup are
 # accessible.
 
 
@@ -342,7 +342,7 @@ sub new
 sub code_full_name_hash
 {
     my $world = shift;
-    return(  %{ $::country_lookup{_code_keyed} } );
+    return(  %{ $Locale::SubCountry::country_lookup{_code_keyed} } );
 }
 #-------------------------------------------------------------------------------
 # Returns a hash of name/code pairs for all countries, keyed by country name.
@@ -350,7 +350,7 @@ sub code_full_name_hash
 sub full_name_code_hash
 {
     my $world = shift;
-    return( %{ $::country_lookup{_full_name_keyed} } );
+    return( %{ $Locale::SubCountry::country_lookup{_full_name_keyed} } );
 }
 #-------------------------------------------------------------------------------
 # Returns sorted array of all country full names
@@ -358,7 +358,7 @@ sub full_name_code_hash
 sub all_full_names
 {
     my $world = shift;
-    return ( sort keys %{ $::country_lookup{_full_name_keyed} });
+    return ( sort keys %{ $Locale::SubCountry::country_lookup{_full_name_keyed} });
 }
 #-------------------------------------------------------------------------------
 # Returns sorted array of all two letter country codes
@@ -366,14 +366,14 @@ sub all_full_names
 sub all_codes
 {
     my $world = shift;
-    return ( sort keys %{ $::country_lookup{_code_keyed} });
+    return ( sort keys %{ $Locale::SubCountry::country_lookup{_code_keyed} });
 }
 
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
 
-our $VERSION = '1.43';
+our $VERSION = '1.44';
 
 
 #-------------------------------------------------------------------------------
@@ -383,13 +383,13 @@ our $VERSION = '1.43';
 
 {
 
-    unless ( $Locale::SubCountryData::xml_data )
+    unless ( $Locale::SubCountry::Data::xml_data )
     {
-      die "Could not locate Locale::SubCountryData::xml_data variable";
+      die "Could not locate Locale::SubCountry::Data::xml_data variable";
     }
     
     # Get all the data from the Locale::SubCountryData pakage and place into an array of lines
-    my @lines = split(/\n/,$Locale::SubCountryData::xml_data);
+    my @lines = split(/\n/,$Locale::SubCountry::Data::xml_data);
  
     while ( @lines )
     {
@@ -453,25 +453,25 @@ our $VERSION = '1.43';
                                 # codes. One hash is keyed by abbreviation and one by full name. Although 
                                 # data is duplicated, this provides the fastest lookup and simplest code.
                 
-                                $::subcountry_lookup{$country_name}{_code_keyed}{$sub_country_code} = $sub_country_name;
-                                $::subcountry_lookup{$country_name}{_full_name_keyed}{$sub_country_name} = $sub_country_code;
+                                $Locale::SubCountry::subcountry_lookup{$country_name}{_code_keyed}{$sub_country_code} = $sub_country_name;
+                                $Locale::SubCountry::subcountry_lookup{$country_name}{_full_name_keyed}{$sub_country_name} = $sub_country_code;
                             }
 
                             if ( $category )
                             {
-                                $::subcountry_lookup{$country_name}{$sub_country_code}{_category} = $category;
+                                $Locale::SubCountry::subcountry_lookup{$country_name}{$sub_country_code}{_category} = $category;
                             }
             
                             if ( $regional_division )
                             {
-                                $::subcountry_lookup{$country_name}{$sub_country_code}{_regional_division} = $regional_division;
+                                $Locale::SubCountry::subcountry_lookup{$country_name}{$sub_country_code}{_regional_division} = $regional_division;
                             }
 
                             if ( $FIPS_code )
                             {
                                 # Insert into doubly indexed hash, grouped by country for FIPS 10-4 codes
-                                $::subcountry_lookup{$country_name}{_FIPS10_4_code_keyed}{$FIPS_code} = $sub_country_code;
-                                $::subcountry_lookup{$country_name}{_ISO3166_2_code_keyed}{$sub_country_code} = $FIPS_code;
+                                $Locale::SubCountry::subcountry_lookup{$country_name}{_FIPS10_4_code_keyed}{$FIPS_code} = $sub_country_code;
+                                $Locale::SubCountry::subcountry_lookup{$country_name}{_ISO3166_2_code_keyed}{$sub_country_code} = $FIPS_code;
                             }
                         }
                         else
@@ -489,8 +489,8 @@ our $VERSION = '1.43';
                     # object, and the objects properties will hold both the countries
                     # name and it's code.
     
-                    $::country_lookup{_code_keyed}{$country_code} = $country_name;
-                    $::country_lookup{_full_name_keyed}{$country_name} = $country_code;
+                    $Locale::SubCountry::country_lookup{_code_keyed}{$country_code} = $country_name;
+                    $Locale::SubCountry::country_lookup{_full_name_keyed}{$country_name} = $country_code;
 
                 }
                 else
@@ -518,11 +518,11 @@ sub new
     # Country may be supplied either as a two letter code, or the full name
     if ( length($country_or_code) == 2 )
     {
-        if ( $::country_lookup{_code_keyed}{$country_or_code} )
+        if ( $Locale::SubCountry::country_lookup{_code_keyed}{$country_or_code} )
         {
             $country_code = $country_or_code;
             # set country to it's full name
-            $country = $::country_lookup{_code_keyed}{$country_or_code};
+            $country = $Locale::SubCountry::country_lookup{_code_keyed}{$country_or_code};
         }
         else
         {
@@ -532,10 +532,10 @@ sub new
     }
     else
     {
-        if ( $::country_lookup{_full_name_keyed}{$country_or_code} )
+        if ( $Locale::SubCountry::country_lookup{_full_name_keyed}{$country_or_code} )
         {
             $country = $country_or_code;
-            $country_code = $::country_lookup{_full_name_keyed}{$country_or_code};
+            $country_code = $Locale::SubCountry::country_lookup{_full_name_keyed}{$country_or_code};
         }
         else
         {
@@ -583,7 +583,7 @@ sub code
 
     $full_name = _clean($full_name);
 
-    my $code = $::subcountry_lookup{$sub_country->{_country}}{_full_name_keyed}{$full_name};
+    my $code = $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_full_name_keyed}{$full_name};
 
     # If a code wasn't found, it could be because the user's capitalization
     # does not match the one in the look up data of this module. For example,
@@ -602,7 +602,7 @@ sub code
         {
             if ( uc($full_name) eq uc($current_name) )
             {
-                $code = $::subcountry_lookup{$sub_country->{_country}}{_full_name_keyed}{$current_name};
+                $code = $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_full_name_keyed}{$current_name};
             }
         }
     }
@@ -627,7 +627,7 @@ sub FIPS10_4_code
     $code = _clean($code);
     $code = uc($code);
 
-    my $FIPS_code = $::subcountry_lookup{$sub_country->{_country}}{_ISO3166_2_code_keyed}{$code};
+    my $FIPS_code = $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_ISO3166_2_code_keyed}{$code};
 
     if ( $FIPS_code )
     {
@@ -648,7 +648,7 @@ sub ISO3166_2_code
 
     $FIPS_code = _clean($FIPS_code);
 
-    my $code = $::subcountry_lookup{$sub_country->{_country}}{_FIPS10_4_code_keyed}{$FIPS_code};
+    my $code = $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_FIPS10_4_code_keyed}{$FIPS_code};
 
     if ( $code )
     {
@@ -670,7 +670,7 @@ sub category
 
     $code = _clean($code);
 
-    my $category = $::subcountry_lookup{$sub_country->{_country}}{$code}{_category};
+    my $category = $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{$code}{_category};
 
     if ( $category )
     {
@@ -692,7 +692,7 @@ sub regional_division
 
     $code = _clean($code);
 
-    my $regional_division = $::subcountry_lookup{$sub_country->{_country}}{$code}{_regional_division};
+    my $regional_division = $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{$code}{_regional_division};
 
     if ( $regional_division )
     {
@@ -718,7 +718,7 @@ sub full_name
     $code = uc($code);
 
     my $full_name = 
-        $::subcountry_lookup{$sub_country->{_country}}{_code_keyed}{$code};
+        $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_code_keyed}{$code};
     if ( $uc_name )
     {
         $full_name = uc($full_name);
@@ -739,7 +739,7 @@ sub full_name
 sub has_sub_countries
 {
     my $sub_country = shift;
-    if ( $::subcountry_lookup{$sub_country->{_country}}{_code_keyed} )
+    if ( $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_code_keyed} )
     {
         return(1);
     }
@@ -756,7 +756,7 @@ sub code_full_name_hash
     my $sub_country = shift;
     if ( $sub_country->has_sub_countries )
     {
-        return( %{ $::subcountry_lookup{$sub_country->{_country}}{_code_keyed} } );
+        return( %{ $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_code_keyed} } );
     }
     else
     {
@@ -771,7 +771,7 @@ sub full_name_code_hash
     my $sub_country = shift;
     if ( $sub_country->has_sub_countries )
     {
-        return( %{ $::subcountry_lookup{$sub_country->{_country}}{_full_name_keyed} } );
+        return( %{ $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_full_name_keyed} } );
     }
     else
     {

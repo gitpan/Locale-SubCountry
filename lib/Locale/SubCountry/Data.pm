@@ -1,6 +1,6 @@
 =head1 NAME
 
-Locale::SubCountryData - data for Locale::SubCountry in XML format
+Locale::SubCountry::Data - data for Locale::SubCountry in XML format
 
 =head1 SYNOPSIS
 
@@ -22,17 +22,19 @@ Locale::SubCountry was written by Kim Ryan <kimryan at cpan dot org>.
 Copyright (c) 2011 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.4 or,
-at your option, any later version of Perl 5 you may have available.
-
+it under the same terms as Perl itself.
 
 
 =cut
 #------------------------------------------------------------------------------
 
-package Locale::SubCountryData;
+use strict;
+use warnings;
+package Locale::SubCountry::Data;
 
-$xml_data =
+our $VERSION = '1.44';
+
+$Locale::SubCountry::Data::xml_data =
 q{
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ISO_3166_2>

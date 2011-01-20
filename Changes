@@ -1,5 +1,11 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+
+1.44 20 Jan 2011
+    Moved Locale::SubCountryData to Locale::SubCountry::Data name space
+    Added use struct and use warnings
+    Moved all global variables to the Locale::SubCountry name space
+
 1.43 14 Jan 2011
     Fixed the number of tests in main.t, should be 17, not 15
 
