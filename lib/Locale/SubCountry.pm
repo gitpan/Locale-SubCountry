@@ -183,7 +183,7 @@ is returned as a capitalised string,  or "unknown" if no match is found.
 =head2 has_sub_countries
 
 Given a sub country object, the C<has_sub_countries> method returns 1 if the
-current country has sub countries, or 0 if it does not. Some small countires 
+current country has sub countries, or 0 if it does not. Some small countries 
 such as Singapore do not have sub countries.
 
 =head2 FIPS10_4_code
@@ -374,7 +374,7 @@ sub all_codes
 
 package Locale::SubCountry;
 
-our $VERSION = '1.45';
+our $VERSION = '1.46';
 
 
 #-------------------------------------------------------------------------------
@@ -548,7 +548,7 @@ sub new
         }
         else
         {
-            warn "Invalid country name: $country_or_code chosen, names mustbe in title case";
+            warn "Invalid country name: $country_or_code chosen, names must be in title case";
             return(undef);
 
         }
