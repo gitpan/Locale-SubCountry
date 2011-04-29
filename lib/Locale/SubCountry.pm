@@ -4,51 +4,58 @@ Locale::SubCountry - convert state, province, county etc. names to/from code
 
 =head1 SYNOPSIS
 
-   my $country_code = 'GB';
-   my $UK = new Locale::SubCountry($country_code);
-   if ( not $UK )
-   {
-       die "Invalid code $country_code\n"; 
-   }
-   elsif (  $UK->has_sub_countries )
-   {
-       print($UK->full_name('DGY'),"\n");           # Dumfries and Galloway
-       print($UK->regional_division('DGY'),"\n");   # CT (Scotland)
-   }
-
-   my $australia = new Locale::SubCountry('AUstralia');
-   print($australia->country,"\n");                 # Australia
-   print($australia->country_code,"\n");            # AU
-
-   if ( $australia->has_sub_countries )
-   {
-       print($australia->code('New South Wales '),"\n");     # NSW
-       print($australia->full_name('S.A.'),"\n");            # South Australia
-       my $upper_case = 1;
-       print($australia->full_name('Qld',$upper_case),"\n"); # QUEENSLAND
-       print($australia->category('NSW'),"\n");              # state
-       print($australia->FIPS10_4_code('ACT'),"\n");         # 01
-       print($australia->ISO3166_2_code('02'),"\n");         # NSW
-
-       my @aus_state_names  = $australia->all_full_names;
-       my @aus_code_names   = $australia->all_codes;
-       my %aus_states_keyed_by_code  = $australia->code_full_name_hash;
-       my %aus_states_keyed_by_name  = $australia->full_name_code_hash;
-
-       foreach my $code ( sort keys %aus_states_keyed_by_code )
-       {
-          printf("%-3s : %s\n",$code,$aus_states_keyed_by_code{$code});
-       }
-   }
-   
-   # Methods for country codes and names
-   
-   my $world = new Locale::SubCountry::World;
-   my @all_countries     = $world->all_full_names;
-   my @all_country_codes = $world->all_codes;
-
-   my %all_countries_keyed_by_name = $world->full_name_code_hash;
-   my %all_country_keyed_by_code   = $world->code_full_name_hash;
+    my $country_code = 'GB';
+    my $UK = new Locale::SubCountry($country_code);
+    if ( not $UK )
+    {
+        die "Invalid code $country_code\n"; 
+    }
+    elsif (  $UK->has_sub_countries )
+    {
+        print($UK->full_name('DGY'),"\n");           # Dumfries and Galloway
+        print($UK->regional_division('DGY'),"\n");   # SCT (Scotland)
+    }
+    
+    my $australia = new Locale::SubCountry('Australia');
+    if ( not $australia )
+    {
+        die "Invalid code: Australia\n"; 
+    }
+    else
+    {
+        print($australia->country,"\n");        # Australia
+        print($australia->country_code,"\n");   # AU
+    
+        if (  $australia->has_sub_countries )
+        {
+            print($australia->code('New South Wales '),"\n");     # NSW
+            print($australia->full_name('S.A.'),"\n");            # South Australia
+            my $upper_case = 1;
+            print($australia->full_name('Qld',$upper_case),"\n"); # QUEENSLAND
+            print($australia->category('NSW'),"\n");              # state
+            print($australia->FIPS10_4_code('ACT'),"\n");         # 01
+            print($australia->ISO3166_2_code('02'),"\n");         # NSW
+      
+            my @aus_state_names  = $australia->all_full_names;
+            my @aus_code_names   = $australia->all_codes;
+            my %aus_states_keyed_by_code  = $australia->code_full_name_hash;
+            my %aus_states_keyed_by_name  = $australia->full_name_code_hash;
+      
+            foreach my $code ( sort keys %aus_states_keyed_by_code )
+            {
+               printf("%-3s : %s\n",$code,$aus_states_keyed_by_code{$code});
+            }   
+        }
+    }
+    
+    # Methods for country codes and names
+    
+    my $world = new Locale::SubCountry::World;
+    my @all_countries     = $world->all_full_names;
+    my @all_country_codes = $world->all_codes;
+    
+    my %all_countries_keyed_by_name = $world->full_name_code_hash;
+    my %all_country_keyed_by_code   = $world->code_full_name_hash;
 
 
 =head1 DESCRIPTION
@@ -374,7 +381,7 @@ sub all_codes
 
 package Locale::SubCountry;
 
-our $VERSION = '1.46';
+our $VERSION = '1.47';
 
 
 #-------------------------------------------------------------------------------
@@ -522,6 +529,7 @@ sub new
 
 
     my ($country,$country_code);
+    
 
     # Country may be supplied either as a two letter code, or the full name
     if ( length($country_or_code) == 2 )
@@ -531,8 +539,8 @@ sub new
         {
             $country_code = $country_or_code;
             # set country to it's full name
-            $country = $Locale::SubCountry::country_lookup{_code_keyed}{country_code};
-        }
+            $country = $Locale::SubCountry::country_lookup{_code_keyed}{$country_code};
+         }
         else
         {
           warn "Invalid country code: $country_or_code chosen";

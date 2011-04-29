@@ -1,5 +1,16 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.47 29 Apr 2011
+    Converted tests to use Test::Simple in main.t
+    Added test for regional_division 
+    Added test for initialising with 2 letter country code
+    Improved synopsis
+    
+    Fixed typo in 'new' method that was stopping the use of 2 letter country codes
+    being used as a parameter. Note, this also caused a faliure in the tests for
+    the dependant module, Lingua::EN::AddressParse
+    
+
 1.46 6 Apr 2011
     Fixed main.t so tests now use title cased country names.
     Corrected typos in Changes, README, SubCountry.pm demo.pl, thanks to Glenn Fowler

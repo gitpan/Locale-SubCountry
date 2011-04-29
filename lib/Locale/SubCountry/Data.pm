@@ -32,7 +32,7 @@ use strict;
 use warnings;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.46';
+our $VERSION = '1.47';
 
 $Locale::SubCountry::Data::xml_data =
 q{
