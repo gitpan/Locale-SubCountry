@@ -32,13 +32,335 @@ use strict;
 use warnings;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.47';
+our $VERSION = '1.48';
 
 $Locale::SubCountry::Data::xml_data =
 q{
 
+
+
+
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ISO_3166_2>
+
+
+<country>
+  <name>New Caledonia</name>
+  <code>NC</code>
+  <subcountry>
+    <name>Îles Loyauté</name>
+    <code>IL</code>
+  </subcountry>
+  <subcountry>
+    <name>Nord</name>
+    <code>NO</code>
+  </subcountry>
+  <subcountry>
+    <name>Sud</name>
+    <code>SU</code>
+  </subcountry>  
+</country>
+
+<country>
+  <name>Palau</name>
+  <code>PW</code>
+ <subcountry>
+    <name>Aimeliik</name>
+    <code>2</code>
+  </subcountry>
+  <subcountry>
+    <name>Airai</name>
+    <code>4</code>
+  </subcountry>
+  <subcountry>
+    <name>Angaur</name>
+    <code>10</code>
+  </subcountry>
+  <subcountry>
+    <name>Hatohobei</name>
+    <code>50</code>
+  </subcountry>
+  <subcountry>
+    <name>Kayangel</name>
+    <code>100</code>
+  </subcountry>
+  <subcountry>
+    <name>Koror</name>
+    <code>150</code>
+  </subcountry>
+  <subcountry>
+    <name>Melekeok</name>
+    <code>212</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngaraard</name>
+    <code>214</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngarchelong</name>
+    <code>218</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngardmau</name>
+    <code>222</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngatpang</name>
+    <code>224</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngchesar</name>
+    <code>226</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngeremlengui</name>
+    <code>227</code>
+  </subcountry>
+  <subcountry>
+    <name>Ngiwal</name>
+    <code>228</code>
+  </subcountry>
+  <subcountry>
+    <name>Peleliu</name>
+    <code>350</code>
+  </subcountry>
+  <subcountry>
+    <name>Sonsorol</name>
+    <code>370</code>
+  </subcountry>  
+</country>
+
+<country>
+  <name>San Marino</name>
+  <code>SM</code>
+<subcountry>
+    <name>Acquaviva</name>
+    <code>1</code>
+  </subcountry>
+  <subcountry>
+    <name>Borgo Maggiore</name>
+    <code>6</code>
+  </subcountry>
+  <subcountry>
+    <name>Chiesanuova</name>
+    <code>2</code>
+  </subcountry>
+  <subcountry>
+    <name>Domagnano</name>
+    <code>3</code>
+  </subcountry>
+  <subcountry>
+    <name>Faetano</name>
+    <code>4</code>
+  </subcountry>
+  <subcountry>
+    <name>Fiorentino</name>
+    <code>5</code>
+  </subcountry>
+  <subcountry>
+    <name>Montegiardino</name>
+    <code>8</code>
+  </subcountry>
+  <subcountry>
+    <name>San Marino</name>
+    <code>7</code>
+  </subcountry>
+  <subcountry>
+    <name>Serravalle</name>
+    <code>9</code>
+  </subcountry>  
+</country>
+
+<country>
+  <name>Guernsey</name>
+  <code>GG</code>
+ <subcountry>
+    <name>Alderney</name>
+    <code>AL</code>
+  </subcountry>
+  <subcountry>
+    <name>Brecqhou</name>
+    <code>BQ</code>
+  </subcountry>
+  <subcountry>
+    <name>Castel</name>
+    <code>CA</code>
+  </subcountry>
+  <subcountry>
+    <name>Forest</name>
+    <code>FO</code>
+  </subcountry>
+  <subcountry>
+    <name>Herm</name>
+    <code>HM</code>
+  </subcountry>
+  <subcountry>
+    <name>Jethou</name>
+    <code>JT</code>
+  </subcountry>
+  <subcountry>
+    <name>Lihou</name>
+    <code>LH</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Andrew</name>
+    <code>AN</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Martin</name>
+    <code>MA</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Peter Port</name>
+    <code>PP</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Pierre du Bois</name>
+    <code>PB</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Sampson</name>
+    <code>SM</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Saviour</name>
+    <code>SV</code>
+  </subcountry>
+  <subcountry>
+    <name>Sark</name>
+    <code>SK</code>
+  </subcountry>
+  <subcountry>
+    <name>Torteval</name>
+    <code>TV</code>
+  </subcountry>
+  <subcountry>
+    <name>Vale</name>
+    <code>VA</code>
+  </subcountry>
+  <subcountry>
+    <name></name>
+    <code></code>
+  </subcountry>  
+</country>
+
+<country>
+  <name>Saint Barthélemy</name>
+  <code>BL</code>
+</country>
+
+<country>
+  <name>Saint Martin</name>
+  <code>MF</code>
+</country>
+
+<country>
+  <name>Sint Maarten</name>
+  <code>SX</code>
+</country>
+
+<country>
+  <name>Tonga</name>
+  <code>TO</code>
+  <subcountry>
+    <name>'Eua</name>
+    <code>01</code>
+  </subcountry>
+  <subcountry>
+    <name>Ha'apai</name>
+    <code>02</code>
+  </subcountry>
+  <subcountry>
+    <name>Niuas</name>
+    <code>03</code>
+  </subcountry>
+  <subcountry>
+    <name>Tongatapu</name>
+    <code>04</code>
+  </subcountry>
+  <subcountry>
+    <name>Vava'u</name>
+    <code>05</code>
+</country>    
+    
+<country>
+  <name>Isle of Man</name>
+  <code>IM</code>
+  <subcountry>
+    <name>Ayre</name>
+    <code>AY</code>
+  </subcountry>
+  <subcountry>
+    <name>Garff</name>
+    <code>GR</code>
+  </subcountry>
+  <subcountry>
+    <name>Glenfaba</name>
+    <code>GB</code>
+  </subcountry>
+  <subcountry>
+    <name>Michael</name>
+    <code>MC</code>
+  </subcountry>
+  <subcountry>
+    <name>Middle</name>
+    <code>MD</code>
+  </subcountry>
+  <subcountry>
+    <name>Rushen</name>
+    <code>RU</code>
+  </subcountry>
+</country>
+  
+<country>
+  <name>Jersey</name>
+  <code>JE</code> 
+  <subcountry>
+    <name>Grouville</name>
+    <code>GR</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Brelade</name>
+    <code>BR</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Clement</name>
+    <code>CL</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Helier</name>
+    <code>HE</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint John</name>
+    <code>JO</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Lawrence</name>
+    <code>LA</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Martin</name>
+    <code>MT</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Mary</name>
+    <code>MY</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Ouen</name>
+    <code>OU</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Peter</name>
+    <code>PE</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint Saviour</name>
+    <code>SA</code>
+  </subcountry>
+</country>
+
 <country>
   <name>Guatemala</name>
   <code>GT</code>
@@ -16748,134 +17070,141 @@ q{
   </subcountry>
 </country>
 
+
+<country>
+  <name>South Sudan</name>
+  <code>SS</code>
+  <subcountry>
+    <name>Central Equatoria</name>
+    <code>CE</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>East Equatoria</name>
+    <code>EE</code>
+    <FIPS>02</FIPS>    
+  </subcountry>
+  <subcountry>
+    <name>Jungoli</name>
+    <code>JG</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Lakes</name>
+    <code>LK</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>North Bahr-al-Ghazal</name>
+    <code>BN</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Unity</name>
+    <code>UY</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Upper Nile</name>
+    <code>NU</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Warap</name>
+    <code>WR</code>
+    <FIPS>08</FIPS>
+  </subcountry>  
+  <subcountry>
+    <name>West Bahr-al-Ghazal</name>
+    <code>BW</code>
+    <FIPS>09</FIPS>
+  </subcountry> 
+  <subcountry>
+    <name>West Equatoria</name>
+    <code>EW</code>
+    <FIPS>10</FIPS>
+  </subcountry>    
+</country>
+
+
 <country>
   <name>Sudan</name>
   <code>SD</code>
   <subcountry>
-    <name>Ahali an Nil</name>
-    <code>23</code>
-    <FIPS>35</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Al Bahr al Ahmar</name>
-    <code>26</code>
-  </subcountry>
-  <subcountry>
-    <name>Al Buhayrat</name>
-    <code>18</code>
-    <FIPS>37</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Al Jazirah</name>
-    <code>07</code>
-    <FIPS>38</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Al Khartum</name>
-    <code>03</code>
-    <FIPS>29</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Al Qaharif</name>
-    <code>06</code>
-    <FIPS>39</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Al Wahdah</name>
-    <code>22</code>
-    <FIPS>40</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>An Nil</name>
-    <code>04</code>
-  </subcountry>
-  <subcountry>
-    <name>An Nil al Abyah</name>
-    <code>08</code>
-  </subcountry>
-  <subcountry>
-    <name>An Nil al Azraq</name>
-    <code>24</code>
+    <name>Blue Nile</name>
+    <code>NB</code>
     <FIPS>42</FIPS>
   </subcountry>
   <subcountry>
-    <name>Ash Shamaliyah</name>
-    <code>01</code>
-    <FIPS>43</FIPS>
-  </subcountry>
-   <subcountry>
-    <name>Central Equatoria</name>
-    <code>17</code>
-    <FIPS>44</FIPS>
+    <name>Gedarif</name>
+    <code>GD</code>
+    <FIPS>39</FIPS>
   </subcountry>
   <subcountry>
-    <name>Gharb al Istiwa'iyah</name>
-    <code>16</code>
-    <FIPS>45</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Gharb Bahr al Ghazal</name>
-    <code>14</code>
-  </subcountry>
-  <subcountry>
-    <name>Gharb Darfur</name>
-    <code>12</code>
-    <FIPS>47</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Gharb Kurdufan</name>
-    <code>10</code>
-    <FIPS>48</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Janub Darfur</name>
-    <code>11</code>
-    <FIPS>49</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Janub Kurdufan</name>
-    <code>13</code>
-    <FIPS>50</FIPS>
-  </subcountry>
-  <subcountry>
-    <name>Junqali</name>
-    <code>20</code>
-    <FIPS>51</FIPS>
+    <name>Gezira</name>
+    <code>GZ</code>
+    <FIPS><38/FIPS>
   </subcountry>
   <subcountry>
     <name>Kassala</name>
-    <code>05</code>
+    <code>KA</code>
     <FIPS>52</FIPS>
   </subcountry>
   <subcountry>
-    <name>Shamal Bahr al Ghazal</name>
-    <code>15</code>
+    <name>Khartoum</name>
+    <code>KH</code>
+    <FIPS>29</FIPS>
   </subcountry>
   <subcountry>
-    <name>Shamal Darfur</name>
-    <code>02</code>
+    <name>North Darfur</name>
+    <code>DN</code>
     <FIPS>55</FIPS>
   </subcountry>
   <subcountry>
-    <name>Shamal Kurdufan</name>
-    <code>09</code>
+    <name>Northern</name>
+    <code>NO</code>
+    <FIPS>43</FIPS>
+  </subcountry> 
+  <subcountry>
+    <name>North Kordufan</name>
+    <code>KN</code>
     <FIPS>56</FIPS>
   </subcountry>
   <subcountry>
-    <name>Sharq al Istiwa'iyah</name>
-    <code>19</code>
-    <FIPS>57</FIPS>
+    <name>Red Sea</name>
+    <code>RS</code>
+    <FIPS>36</FIPS>
+  </subcountry>
+ <subcountry>
+    <name>River Nile</name>
+    <code>NR</code>
+    <FIPS><53/FIPS>
   </subcountry>
   <subcountry>
-    <name>Sinnar</name>
-    <code>25</code>
-    <FIPS>58</FIPS>
+    <name>Sennar</name>
+    <code>SI</code>
+    <FIPS><58/FIPS>
   </subcountry>
   <subcountry>
-    <name>Warab</name>
-    <code>21</code>
-    <FIPS>59</FIPS>
+    <name>South Darfur</name>
+    <code>DS</code>
+    <FIPS>49</FIPS>
   </subcountry>
+  <subcountry>
+    <name>South Kordufan</name>
+    <code>KS</code>
+    <FIPS>50</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>West Darfur</name>
+    <code>DW</code>
+    <FIPS>47</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>White Nile</name>
+    <code>NW</code>
+    <FIPS>41</FIPS>
+  </subcountry>    
 </country>
 
 <country>

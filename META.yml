@@ -1,21 +1,13 @@
 --- #YAML:1.0
-name:               Locale-SubCountry
-version:            1.47
-abstract:           convert state, province, county ... names to/from ISO 3166-2 code
+name:                Locale-SubCountry
+version:             1.48
+abstract:            convert state, province, county ... names to/from ISO 3166-2 code
+license:             perl
+generated_by:        ExtUtils::MakeMaker version 6.31
+distribution_type:   module
+requires:     
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
 author:
     - Kim Ryan <kimryan at cpan org>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
-build_requires:
-    ExtUtils::MakeMaker:  0
-requires:  {}
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
-meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
