@@ -381,7 +381,7 @@ sub all_codes
 
 package Locale::SubCountry;
 
-our $VERSION = '1.49';
+our $VERSION = '1.50';
 
 
 #-------------------------------------------------------------------------------

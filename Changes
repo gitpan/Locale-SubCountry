@@ -1,6 +1,9 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
 
+1.50 18 Apr 2012
+    Added Makefile.PL  back to the distribution set
+
 1.49 18 Apr 2012
     Fixed errors in XML coding
     Fixed the Brazilian state Rondônia, fix for RT bug 73830
