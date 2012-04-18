@@ -1,6 +1,13 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
 
+1.49 18 Apr 2012
+    Fixed errors in XML coding
+    Fixed the Brazilian state Rondônia, fix for RT bug 73830
+    Added 3 new Indonesian provinces, fix for RT bug 74763
+    Added 'use utf8' to Data.pm, fix for RT bug 73829
+    Added Metro Manila in Philippines, fixed some other provinces, fix for RT bug 69678
+
 1.48 17 Apr 2012
     Added South Sudan as a new country
     Removed states from Sudan

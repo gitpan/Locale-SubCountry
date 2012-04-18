@@ -30,9 +30,10 @@ it under the same terms as Perl itself.
 
 use strict;
 use warnings;
+use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.48';
+our $VERSION = '1.49';
 
 $Locale::SubCountry::Data::xml_data =
 q{
@@ -281,6 +282,7 @@ q{
   <subcountry>
     <name>Vava'u</name>
     <code>05</code>
+  </subcountry>    
 </country>    
     
 <country>
@@ -1148,6 +1150,13 @@ q{
     <FIPS>14</FIPS>
   </subcountry>
   <subcountry>
+    <name>Kepulauan Riau</name>
+    <code>KR</code>
+    <regional_division>SM</regional_division>
+    <category>province</category>
+    <FIPS>40</FIPS>
+  </subcountry>  
+  <subcountry>
     <name>Lampung</name>
     <code>LA</code>
     <regional_division>SM</regional_division>
@@ -1188,6 +1197,12 @@ q{
     <category>province</category>
   </subcountry>
   <subcountry>
+    <name>Papua Barat</name>
+    <code>PB</code>
+    <regional_division>IJ</regional_division>
+    <category>province</category>
+  </subcountry>  
+  <subcountry>
     <name>Riau</name>
     <code>RI</code>
     <regional_division>SM</regional_division>
@@ -1208,6 +1223,13 @@ q{
     <category>province</category>
     <FIPS>21</FIPS>
   </subcountry>
+ <subcountry>
+    <name>Sulawesi Barat</name>
+    <code>SG</code>
+    <regional_division>SR</regional_division>
+    <category>province</category>
+    <FIPS>41</FIPS>
+  </subcountry>  
   <subcountry>
     <name>Sulawesi Tenggara</name>
     <code>SG</code>
@@ -7463,7 +7485,7 @@ q{
     <FIPS>23</FIPS>
   </subcountry>
   <subcountry>
-    <name>RondFnia</name>
+    <name>Rondônia</name>
     <code>RO</code>
     <category>state</category>
     <FIPS>24</FIPS>
@@ -15504,13 +15526,19 @@ q{
     <FIPS>39</FIPS>
   </subcountry>
   <subcountry>
-    <name>Mindoro Occidental</name>
+    <name>Metropolitan Manila</name>
+    <code>MM</code>
+    <regional_division>NCR</regional_division>
+    <FIPS>9</FIPS>
+  </subcountry>  
+  <subcountry>
+    <name>Occidental Mindoro</name>
     <code>MDC</code>
     <regional_division>04</regional_division>
     <FIPS>40</FIPS>
   </subcountry>
   <subcountry>
-    <name>Mindoro Oriental</name>
+    <name>Oriental Mindoro</name>
     <code>MDR</code>
     <regional_division>04</regional_division>
     <FIPS>41</FIPS>
@@ -15528,9 +15556,9 @@ q{
     <FIPS>43</FIPS>
   </subcountry>
   <subcountry>
-    <name>Mountain Province</name>
+    <name>Mountain</name>
     <code>MOU</code>
-    <regional_division>15</regional_division>
+    <regional_division>CAR</regional_division>
   </subcountry>
   <subcountry>
     <name>Negros Occidental</name>
@@ -17143,7 +17171,7 @@ q{
   <subcountry>
     <name>Gezira</name>
     <code>GZ</code>
-    <FIPS><38/FIPS>
+    <FIPS>38</FIPS>
   </subcountry>
   <subcountry>
     <name>Kassala</name>
@@ -17178,12 +17206,12 @@ q{
  <subcountry>
     <name>River Nile</name>
     <code>NR</code>
-    <FIPS><53/FIPS>
+    <FIPS>53</FIPS>
   </subcountry>
   <subcountry>
     <name>Sennar</name>
     <code>SI</code>
-    <FIPS><58/FIPS>
+    <FIPS>58</FIPS>
   </subcountry>
   <subcountry>
     <name>South Darfur</name>
