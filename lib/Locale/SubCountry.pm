@@ -281,10 +281,6 @@ province and a geographical unit. Examples are:
 
 FIPS codes are not provided for all sub countries. 
 
-=head1 BUGS
-
-None known
-
 
 =head1 AUTHOR
 
@@ -305,7 +301,7 @@ TJ Mather supplied the FIPS codes and many ammendments to the sub country data
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2011 Kim Ryan. All rights reserved.
+Copyright (c) 2012 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -381,7 +377,7 @@ sub all_codes
 
 package Locale::SubCountry;
 
-our $VERSION = '1.50';
+our $VERSION = '1.51';
 
 
 #-------------------------------------------------------------------------------

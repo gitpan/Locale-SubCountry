@@ -1,5 +1,12 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.51 2 July 2012
+    Many new countries added, thanks to Ron Savage
+    Sub countries added to existing countires
+    Many corrections to sub country data
+    Changed to all  lower case for the spelling of 'and', 'of' 'the' etc that may occur in names
+    Added 'use utf8' to main.t
+    
 
 1.50 18 Apr 2012
     Added Makefile.PL  back to the distribution set
@@ -14,7 +21,7 @@ Revision history for Perl CPAN module Locale::SubCountry
 1.48 17 Apr 2012
     Added South Sudan as a new country
     Removed states from Sudan
-    Added New Caledonia,  Palau, San Marino, Guernsey, Jersey, Saint Martin,
+    Added New Caledonia, Palau, San Marino, Guernsey, Jersey, Saint Martin,
       Saint Barthélemy, Sint Maarten, Isle Of Man
 
 1.47 29 Apr 2011
@@ -163,7 +170,7 @@ Revision history for Perl CPAN module Locale::SubCountry
     The above method names duplicate existing method names (polymorphism),
         so make sure you are working with the right type of object first.
 
-    These changes were necessary because of user requests for country  name 
+    These changes were necessary because of user requests for country name 
     and code look ups prior to sub-country lookups. Previous versions would not 
     work with Locale::Country because of a clash in exported names. Thanks to
     Todd Green for this suggestion.

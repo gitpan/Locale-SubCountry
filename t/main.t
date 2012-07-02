@@ -7,6 +7,7 @@
 use strict;
 use warnings;
 use Test::Simple tests => 18;
+use utf8;
 use Locale::SubCountry;
 
 my $australia = new Locale::SubCountry('Australia');

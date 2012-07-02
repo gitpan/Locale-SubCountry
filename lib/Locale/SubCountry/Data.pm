@@ -19,7 +19,7 @@ Locale::SubCountry was written by Kim Ryan <kimryan at cpan dot org>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2011 Kim Ryan. All rights reserved.
+Copyright (c) 2012 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -30,10 +30,11 @@ it under the same terms as Perl itself.
 
 use strict;
 use warnings;
+
 use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.50';
+our $VERSION = '1.51';
 
 $Locale::SubCountry::Data::xml_data =
 q{
@@ -251,7 +252,7 @@ q{
 </country>
 
 <country>
-  <name>Saint Martin</name>
+  <name>Saint Martin (French part)</name>
   <code>MF</code>
 </country>
 
@@ -478,7 +479,7 @@ q{
 </country>
 
 <country>
-  <name>Guinea Bissau</name>
+  <name>Guinea-Bissau</name>
   <code>GW</code>
   <subcountry>
     <name>Bissau</name>
@@ -1792,7 +1793,7 @@ q{
 </country>
 
 <country>
-  <name>Iran (Islamic Republic Of)</name>
+  <name>Iran, Islamic Republic of</name>
   <code>IR</code>
   <subcountry>
     <name>Ardabil</name>
@@ -3532,7 +3533,7 @@ q{
 </country>
 
 <country>
-  <name>Korea, Democratic People's Republic Of</name>
+  <name>Korea, Democratic People's Republic of</name>
   <code>KP</code>
   <subcountry>
     <name>Najin Sonbong-si</name>
@@ -3613,7 +3614,7 @@ q{
 </country>
 
 <country>
-  <name>Korea, Republic Of</name>
+  <name>Korea, Republic of</name>
   <code>KR</code>
   <subcountry>
     <name>Seoul Teugbyeolsi [Seoul-T'ukpyolshi]</name>
@@ -3785,7 +3786,7 @@ q{
     <FIPS>03</FIPS>
   </subcountry>
   <subcountry>
-    <name>Ra?s al Khaymah</name>
+    <name>Ras al Khaymah</name>
     <FIPS>05</FIPS>
     <code>RK</code>
   </subcountry>
@@ -4255,7 +4256,7 @@ q{
 </country>
 
 <country>
-  <name>Moldova, Repuplic Of</name>
+  <name>Moldova, Republic of</name>
   <code>MD</code>
   <subcountry>
     <name>Taraclia</name>
@@ -5946,7 +5947,7 @@ q{
 </country>
 
 <country>
-  <name>Bosnia And Herzegovina</name>
+  <name>Bosnia and Herzegovina</name>
   <code>BA</code>
   <subcountry>
     <name>Federacija Bosna i Hercegovina</name>
@@ -6764,7 +6765,7 @@ q{
 </country>
 
 <country>
-  <name>Moldova, Repuplic Of</name>
+  <name>Moldova, Repuplic of</name>
   <code>MD</code>
   <subcountry>
     <name>Gagauzia, Unitate Teritoriala Autonoma (UTAG)</name>
@@ -8291,7 +8292,7 @@ q{
 </country>
 
 <country>
-  <name>Côte D'Ivoire</name>
+  <name>Côte d'Ivoire</name>
   <code>CI</code>
   <subcountry>
     <name>Dix-Huit Montagnes</name>
@@ -10652,7 +10653,7 @@ q{
 </country>
 
 <country>
-  <name>Micronesia (Federated States Of)</name>
+  <name>Micronesia, Federated States of</name>
   <code>FM</code>
   <subcountry>
     <name>Chuuk</name>
@@ -16399,7 +16400,7 @@ q{
 </country>
 
 <country>
-  <name>Russia</name>
+  <name>Russian Federation</name>
   <code>RU</code>
   <subcountry>
     <name>Adygeya, Respublika</name>
@@ -17345,7 +17346,7 @@ q{
 </country>
 
 <country>
-  <name>Saint Helena</name>
+  <name>Saint Helena, Ascension and Tristan da Cunha</name>
   <code>SH</code>
   <subcountry>
     <name>Saint Helena</name>
@@ -17636,7 +17637,7 @@ q{
 </country>
 
 <country>
-  <name>Sao Tome And Principe</name>
+  <name>Sao Tome and Principe</name>
   <code>ST</code>
   <subcountry>
     <name>Príncipe</name>
@@ -18949,7 +18950,7 @@ q{
 </country>
 
 <country>
-  <name>Trinidad And Tobago</name>
+  <name>Trinidad and Tobago</name>
   <code>TT</code>
   <subcountry>
     <name>Couva-Tabaquite-Talparo</name>
@@ -19037,7 +19038,7 @@ q{
 </country>
 
 <country>
-  <name>Taiwan, Province Of China</name>
+  <name>Taiwan, Province of China</name>
   <code>TW</code>
   <subcountry>
     <name>Kaohsiung</name>
@@ -19159,7 +19160,7 @@ q{
 </country>
 
 <country>
-  <name>Tanzania, United Republic Of</name>
+  <name>Tanzania, United Republic of</name>
   <code>TZ</code>
   <subcountry>
     <name>Arusha</name>
@@ -20819,7 +20820,7 @@ q{
 </country>
 
 <country>
-  <name>Serbia </name>
+  <name>Serbia</name>
   <code>RS</code>
   <subcountry>
     <name>Belgrade</name>
@@ -22249,7 +22250,7 @@ q{
 </country>
 
 <country>
-  <name>Tanzania, United Republic Of</name>
+  <name>Tanzania, United Republic of</name>
   <code>TZ</code>
   <subcountry>
     <name>Manyara</name>
@@ -22490,10 +22491,6 @@ q{
   <code>AI</code>
 </country>
 
-<country>
-  <name>Singapore</name>
-  <code>SG</code>
-</country>
 
 <country>
   <name>Netherlands Antilles</name>
@@ -22536,7 +22533,7 @@ q{
 </country>
 
 <country>
-  <name>Wallis And Futuna</name>
+  <name>Wallis and Futuna</name>
   <code>WF</code>
 </country>
 
@@ -22555,20 +22552,13 @@ q{
   <code>VA</code>
 </country>
 
-<country>
-  <name>Malta</name>
-  <code>MT</code>
-</country>
+
 
 <country>
   <name>Northern Mariana Islands</name>
   <code>MP</code>
 </country>
 
-<country>
-  <name>Monaco</name>
-  <code>MC</code>
-</country>
 
 <country>
   <name>British Indian Ocean Territory</name>
@@ -22576,7 +22566,7 @@ q{
 </country>
 
 <country>
-  <name>Heard Island And McDonald Islands</name>
+  <name>Heard Island and McDonald Islands</name>
   <code>HM</code>
 </country>
 
@@ -22587,14 +22577,10 @@ q{
 
 
 <country>
-  <name>South Georgia And The South Sandwich Islands</name>
+  <name>South Georgia and the South Sandwich Islands</name>
   <code>GS</code>
 </country>
 
-<country>
-  <name>Greenland/Groenland</name>
-  <code>GL</code>
-</country>
 
 <country>
   <name>Gibraltar</name>
@@ -22627,19 +22613,15 @@ q{
 </country>
 
 <country>
-  <name>Turks And Caicos Islands</name>
+  <name>Turks and Caicos Islands</name>
   <code>TC</code>
 </country>
 
 <country>
-  <name>Svalbard And Jan Mayen</name>
+  <name>Svalbard and Jan Mayen</name>
   <code>SJ</code>
 </country>
 
-<country>
-  <name>Palestinian Territory</name>
-  <code>PS</code>
-</country>
 
 <country>
   <name>Puerto Rico</name>
@@ -22652,7 +22634,7 @@ q{
 </country>
 
 <country>
-  <name>Saint Pierre And Miquelon</name>
+  <name>Saint Pierre and Miquelon</name>
   <code>PM</code>
 </country>
 
@@ -22671,57 +22653,49 @@ q{
   <code>CX</code>
 </country>
 
-<country>
-  <name>Antigua And Barbuda</name>
-  <code>AG</code>
-</country>
 
 <country>
   <name>Bermuda</name>
   <code>BM</code>
 </country>
 
-<country>
-  <name>Barbados</name>
-  <code>BB</code>
-</country>
 
 <country>
   <name>Andorra</name>
   <code>AD</code>
   <subcountry>
     <name>Andorra la Vella</name>
-    <code>AN</code>
+    <code>07</code>
     <FIPS>07</FIPS>
   </subcountry>
   <subcountry>
     <name>Canillo</name>
-    <code>CA</code>
+    <code>02</code>
     <FIPS>02</FIPS>
   </subcountry>
   <subcountry>
     <name>Encamp</name>
-    <code>EN</code>
+    <code>03</code>
     <FIPS>03</FIPS>
   </subcountry>
   <subcountry>
     <name>Escaldes-Engordany</name>
-    <code>EE</code>
+    <code>08</code>
     <FIPS>08</FIPS>
   </subcountry>
   <subcountry>
     <name>La Massana</name>
-    <code>MA</code>
+    <code>04</code>
     <FIPS>04</FIPS>
   </subcountry>
   <subcountry>
     <name>Ordino</name>
-    <code>OR</code>
+    <code>05</code>
     <FIPS>05</FIPS>
   </subcountry>
   <subcountry>
     <name>Sant Julià de Lòria</name>
-    <code>JL</code>
+    <code>06</code>
     <FIPS>06</FIPS>
   </subcountry>
 </country>
@@ -22742,35 +22716,12 @@ q{
   <code>MO</code>
 </country>
 
-<country>
-  <name>Macedonia, The Former Yugoslav Republic Of</name>
-  <code>MK</code>
-</country>
-
-<country>
-  <name>Liechtenstein</name>
-  <code>LI</code>
-</country>
-
-<country>
-  <name>Saint Lucia</name>
-  <code>LC</code>
-</country>
 
 <country>
   <name>Cayman Islands</name>
   <code>KY</code>
 </country>
 
-<country>
-  <name>Saint Vincent And The Grenadines</name>
-  <code>VC</code>
-</country>
-
-<country>
-  <name>Saint Kitts And Nevis</name>
-  <code>KN</code>
-</country>
 
 <country>
   <name>Guadeloupe</name>
@@ -22897,27 +22848,1328 @@ q{
     <name>Yuen Long</name>
     <code>YL</code>
   </subcountry>
-</country>  
+</country>
+
+<country>
+  <name>Antigua and Barbuda</name>
+  <code>AG</code>
+  <subcountry>
+    <name>Barbuda</name>
+    <code>10</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Redonda</name>
+    <code>11</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint George</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint John</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Mary</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Paul</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Peter</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Philip</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Barbados</name>
+  <code>BB</code>
+  <subcountry>
+    <name>Christ Church</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Andrew</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint George</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint James</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint John</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Joseph</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Lucy</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Michael</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Peter</name>
+    <code>9</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Philip</name>
+    <code>10</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Thomas</name>
+    <code>11</code>
+    <FIPS>11</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Bonaire, Saint Eustatius and Saba</name>
+  <code>BQ</code>
+  <subcountry>
+    <name>Bonaire</name>
+    <code>BO</code>
+    <FIPS>BQ1</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saba</name>
+    <code>SA</code>
+    <FIPS>BQ2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Sint Eustatius</name>
+    <code>SE</code>
+    <FIPS>BQ3</FIPS>
+  </subcountry>
+</country>
 
 <country>
   <name>Dominica</name>
   <code>DM</code>
+  <subcountry>
+    <name>Saint Andrew</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint David</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint George</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint John</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Joseph</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Luke</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Mark</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Patrick</name>
+    <code>9</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Paul</name>
+    <code>10</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Peter</name>
+    <code>11</code>
+    <FIPS>11</FIPS>
+  </subcountry>
 </country>
 
 <country>
-  <name>Tuvalu</name>
-  <code>TV</code>
+  <name>Greenland</name>
+  <code>GL</code>
+  <subcountry>
+    <name>Kujalleq</name>
+    <code>KU</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Qaasuitsup</name>
+    <code>QA</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Qeqqata</name>
+    <code>QE</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Sermersooq</name>
+    <code>SM</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Unorganized</name>
+    <code>UO</code>
+  </subcountry>
+</country>
+
+<country>
+  <name>Saint Kitts and Nevis</name>
+  <code>KN</code>
+  <subcountry>
+    <name>Christ Church Nichola Town</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Anne Sandy Point</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint George Basseterre</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint George Gingerland</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint James Windward</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint John Capisterre</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint John Figtree</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Mary Cayon</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Paul Capisterre</name>
+    <code>9</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Paul Charlestown</name>
+    <code>10</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Peter Basseterre</name>
+    <code>11</code>
+    <FIPS>11</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Thomas Lowland</name>
+    <code>12</code>
+    <FIPS>12</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Thomas Middle Island</name>
+    <code>13</code>
+    <FIPS>13</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Trinity Palmetto Point</name>
+    <code>15</code>
+    <FIPS>15</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Saint Lucia</name>
+  <code>LC</code>
+  <subcountry>
+    <name>Anse-la-Raye</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Canaries</name>
+    <code>CN</code>
+  </subcountry>
+  <subcountry>
+    <name>Castries</name>
+    <code>2</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Choiseul</name>
+    <code>3</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Dennery</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gros Islet</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Laborie</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Micoud</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Soufrière</name>
+    <code>10</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vieux Fort</name>
+    <code>11</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Liechtenstein</name>
+  <code>LI</code>
+  <subcountry>
+    <name>Balzers</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Eschen</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gamprin</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Mauren</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Planken</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Ruggell</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Schaan</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Schellenberg</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Triesen</name>
+    <code>9</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Triesenberg</name>
+    <code>10</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vaduz</name>
+    <code>11</code>
+    <FIPS>11</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Monaco</name>
+  <code>MC</code>
+  <subcountry>
+    <name>Monaco</name>
+    <code>MC</code>
+  </subcountry>
+</country>
+
+<country>
+  <name>Macedonia, the former Yugoslav Republic of</name>
+  <code>MK</code>
+  <subcountry>
+    <name>Aerodrom</name>
+    <code>1</code>
+    <FIPS>F3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Aračinovo</name 
+    <code>2</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Berovo</name>
+    <code>3</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Bitola</name>
+    <code>4</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Bogdanci</name>
+    <code>5</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Bogovinje</name>
+    <code>6</code>
+    <FIPS>C7</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Bosilovo</name>
+    <code>7</code>
+    <FIPS>11</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Brvenica</name>
+    <code>8</code>
+    <FIPS>12</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Butel</name>
+    <code>9</code>
+    <FIPS>F4</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Centar</name>
+    <code>77</code>
+    <FIPS>D1</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Centar Župa</name>
+    <code>78</code>
+    <FIPS>18</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Čair</name>
+    <code>79</code>
+    <FIPS>C8</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Čaška</name>
+    <code>80</code>
+    <FIPS>C9</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Češinovo-Obleševo</name>
+    <code>81</code>
+    <FIPS>19</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Čučer Sandevo</name>
+    <code>82</code>
+    <FIPS>20</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Debar</name>
+    <code>21</code>
+    <FIPS>D2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Debartsa</name>
+    <code>22</code>
+    <FIPS>F5</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Delčevo</name>
+    <code>23</code>
+    <FIPS>22</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Demir Hisar</name>
+    <code>25</code>
+    <FIPS>D3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Demir Kapija</name>
+    <code>24</code>
+    <FIPS>25</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Dojran</name>
+    <code>26</code>
+    <FIPS>E5</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Dolneni</name>
+    <code>27</code>
+    <FIPS>28</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Drugovo</name>
+    <code>28</code>
+    <FIPS>30</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gazi Baba</name>
+    <code>17</code>
+    <FIPS>32</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gevgelija</name>
+    <code>18</code>
+    <FIPS>33</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gjorče Petrov</name>
+    <code>29</code>
+    <FIPS>29</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gostivar</name>
+    <code>19</code>
+    <FIPS>D4</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Gradsko</name>
+    <code>20</code>
+    <FIPS>35</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Ilinden</name>
+    <code>34</code>
+    <FIPS>36</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Jegunovtse</name>
+    <code>35</code>
+    <FIPS>D5</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Karbinci</name>
+    <code>37</code>
+    <FIPS>40</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Karpoš/name>
+    <code>38</code>
+    <FIPS>41</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kavadartsi</name>
+    <code>36</code>
+    <FIPS>D6</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kičevo</name>
+    <code>40</code>
+    <FIPS>43</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kisela Voda</name>
+    <code>39</code>
+    <FIPS>44</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kočani</name>
+    <code>42</code>
+    <FIPS>46</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Konče</name>
+    <code>41</code>
+    <FIPS>47</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kratovo</name>
+    <code>43</code>
+    <FIPS>51</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kriva Palanka</name>
+    <code>44</code>
+    <FIPS>52</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Krivogaštani</name>
+    <code>45</code>
+    <FIPS>53</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kruševo</name>
+    <code>46</code>
+  </subcountry>
+  <subcountry>
+    <name>Kumanovo</name>
+    <code>47</code>
+    <FIPS>D7</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Lipkovo</name>
+    <code>48</code>
+    <FIPS>59</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Lozovo</name>
+    <code>49</code>
+    <FIPS>60</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Makedonska Kamenica</name>
+    <code>51</code>
+    <FIPS>62</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Makedonski Brod</name>
+    <code>52</code>
+    <FIPS>D8</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Mavrovo and Rostuša</name>
+    <code>50</code>
+    <FIPS>E4</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Mogila</name>
+    <code>53</code>
+    <FIPS>D9</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Negotino</name>
+    <code>54</code>
+    <FIPS>69</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Novatsi</name>
+    <code>55</code>
+    <FIPS>E1</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Novo Selo</name>
+    <code>56</code>
+    <FIPS>72</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Ohrid</name>
+    <code>58</code>
+    <FIPS>E2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Oslomej</name>
+    <code>57</code>
+    <FIPS>77</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Pehčevo</name>
+    <code>60</code>
+    <FIPS>78</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Petrovec</name>
+    <code>59</code>
+    <FIPS>79</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Plasnica</name>
+    <code>61</code>
+    <FIPS>80</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Prilep</name>
+    <code>62</code>
+    <FIPS>E3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Probištip</name>
+    <code>63</code>
+    <FIPS>83</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Radoviš</name>
+    <code>64</code>
+    <FIPS>84</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Rankovce</name>
+    <code>65</code>
+    <FIPS>85</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Resen</name>
+    <code>66</code>
+    <FIPS>86</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Rosoman</name>
+    <code>67</code>
+    <FIPS>87</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saraj</name>
+    <code>68</code>
+    <FIPS>90</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Štip</name>
+    <code>83</code>
+    <FIPS>98</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Šuto Orizari</name>
+    <code>84</code>
+    <FIPS>A3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Sopište</name>
+    <code>70</code>
+    <FIPS>92</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Staro Nagoričane</name>
+    <code>71</code>
+    <FIPS>97</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Struga</name>
+    <code>72</code>
+    <FIPS>E6</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Strumitsa</name>
+    <code>73</code>
+    <FIPS>E7</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Studeničani</name>
+    <code>74</code>
+    <FIPS>A2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Sveti Nikole</name>
+    <code>69</code>
+    <FIPS>A4</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Tearce</name>
+    <code>75</code>
+    <FIPS>A5</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Tetovo</name>
+    <code>76</code>
+    <FIPS>E8</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Valandovo</name>
+    <code>10</code>
+    <FIPS>E9</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vasilevo</name>
+    <code>11</code>
+    <FIPS>A9</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Veles</name>
+    <code>13</code>
+    <FIPS>F1</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vevčani</name>
+    <code>12</code>
+    <FIPS>B3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vinitsa</name>
+    <code>14</code>
+    <FIPS>F2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vraneštica</name>
+    <code>15</code>
+    <FIPS>B6</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vrapčište</name>
+    <code>16</code>
+    <FIPS>B7</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Zajas</name>
+    <code>31</code>
+    <FIPS>C1</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Zelenikovo</name>
+    <code>32</code>
+    <FIPS>C2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Želino</name>
+    <code>30</code>
+    <FIPS>C3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Zrnovci</name>
+    <code>33</code>
+    <FIPS>C6</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Malta</name>
+  <code>MT</code>
+  <subcountry>
+    <name>Central</name>
+    <code>CE</code>
+  </subcountry>
+  <subcountry>
+    <name>Gozo</name>
+    <code>GO</code>
+  </subcountry>
+  <subcountry>
+    <name>Northern</name>
+    <code>NO</code>
+  </subcountry>
+  <subcountry>
+    <name>South Eastern</name>
+    <code>SE</code>
+  </subcountry>
+  <subcountry>
+    <name>Southern</name>
+    <code>SO</code>
+  </subcountry>
 </country>
 
 <country>
   <name>Nauru</name>
   <code>NR</code>
+  <subcountry>
+    <name>Aiwo</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Anabar</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Anetan</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Anibare</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Baiti</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Boe</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Buada</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Denigomodu</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Ewa</name>
+    <code>9</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Ijuw</name>
+    <code>10</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Meneng</name>
+    <code>11</code>
+    <FIPS>11</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Nibok</name>
+    <code>12</code>
+    <FIPS>12</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Uaboe</name>
+    <code>13</code>
+    <FIPS>13</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Yaren</name>
+    <code>14</code>
+    <FIPS>14</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Palestinian Territory, Occupied</name>
+  <code>PS</code>
+  <subcountry>
+    <name>Gaza</name>
+    <code>GZ</code>
+  </subcountry>
+  <subcountry>
+    <name>West Bank</name>
+    <code>WE</code>
+  </subcountry>
 </country>
 
 <country>
   <name>Seychelles</name>
   <code>SC</code>
+  <subcountry>
+    <name>Anse aux Pins</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Anse Boileau</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Anse Étoile</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Anse Royale</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Au Cap</name>
+    <code>4</code>
+    <FIPS>28</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Baie Lazare</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Baie Sainte Anne</name>
+    <code>7</code>
+    <FIPS>07</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Beau Vallon</name>
+    <code>8</code>
+    <FIPS>08</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Bel Air</name>
+    <code>9</code>
+    <FIPS>09</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Belombre</name>
+    <code>10</code>
+    <FIPS>10</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Cascade</name>
+    <code>11</code>
+    <FIPS>11</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>English River</name>
+    <code>16</code>
+    <FIPS>26</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Glacis</name>
+    <code>12</code>
+    <FIPS>12</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Grand' Anse (Mahé)</name>
+    <code>13</code>
+    <FIPS>24</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Grand' Anse (Praslin)</name>
+    <code>14</code>
+    <FIPS>14</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>La Digue and Inner Islands</name>
+    <code>15</code>
+    <FIPS>25</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Les Mamelles</name>
+    <code>24</code>
+    <FIPS>29</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Mont Buxton</name>
+    <code>17</code>
+    <FIPS>17</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Mont Fleuri</name>
+    <code>18</code>
+    <FIPS>18</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Outer Islands</name>
+    <code>OI</code>
+  </subcountry>
+  <subcountry>
+    <name>Plaisance</name>
+    <code>19</code>
+    <FIPS>19</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Pointe La Rue</name>
+    <code>20</code>
+    <FIPS>20</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Port Glaud</name>
+    <code>21</code>
+    <FIPS>27</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Roche Caïman</name>
+    <code>25</code>
+    <FIPS>30</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Louis</name>
+    <code>22</code>
+    <FIPS>22</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Takamaka</name>
+    <code>23</code>
+    <FIPS>23</FIPS>
+  </subcountry>
 </country>
+
+<country>
+  <name>Singapore</name>
+  <code>SG</code>
+  <subcountry>
+    <name>Central Singapore</name>
+    <code>1</code>
+  </subcountry>
+  <subcountry>
+    <name>North East</name>
+    <code>2</code>
+  </subcountry>
+  <subcountry>
+    <name>North West</name>
+    <code>3</code>
+  </subcountry>
+  <subcountry>
+    <name>South East</name>
+    <code>4</code>
+  </subcountry>
+  <subcountry>
+    <name>South West</name>
+    <code>5</code>
+  </subcountry>
+</country>
+
+<country>
+  <name>Tuvalu</name>
+  <code>TV</code>
+  <subcountry>
+    <name>Funafuti</name>
+    <code>FUN</code>
+  </subcountry>
+  <subcountry>
+    <name>Nanumanga</name>
+    <code>NMG</code>
+  </subcountry>
+  <subcountry>
+    <name>Nanumea</name>
+    <code>NMA</code>
+  </subcountry>
+  <subcountry>
+    <name>Niutao</name>
+    <code>NIT</code>
+  </subcountry>
+  <subcountry>
+    <name>Nui</name>
+    <code>NUI</code>
+  </subcountry>
+  <subcountry>
+    <name>Nukufetau</name>
+    <code>NKF</code>
+  </subcountry>
+  <subcountry>
+    <name>Nukulaelae</name>
+    <code>NKL</code>
+  </subcountry>
+  <subcountry>
+    <name>Vaitupu</name>
+    <code>VAI</code>
+  </subcountry>
+</country>
+
+<country>
+  <name>Saint Vincent and the Grenadines</name>
+  <code>VC</code>
+  <subcountry>
+    <name>Charlotte</name>
+    <code>1</code>
+    <FIPS>01</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Grenadines</name>
+    <code>6</code>
+    <FIPS>06</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Andrew</name>
+    <code>2</code>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint David</name>
+    <code>3</code>
+    <FIPS>03</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint George</name>
+    <code>4</code>
+    <FIPS>04</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saint Patrick</name>
+    <code>5</code>
+    <FIPS>05</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Åland Islands</name>
+  <code>AX</code>
+  <subcountry>
+    <name>Brändö</name>
+    <code>35</code>
+    <FIPS>3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Eckerö</name>
+    <code>43</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Finström</name>
+    <code>60</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Föglö</name>
+    <code>62</code>
+    <FIPS>3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Geta</name>
+    <code>65</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Hammarland</name>
+    <code>76</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Jomala</name>
+    <code>170</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kökar</name>
+    <code>318</code>
+    <FIPS>3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Kumlinge</name>
+    <code>295</code>
+    <FIPS>3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Lemland</name>
+    <code>417</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Lumparland</name>
+    <code>438</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Mariehamn</name>
+    <code>478</code>
+    <FIPS>1</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Saltvik</name>
+    <code>736</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Sottunga</name>
+    <code>766</code>
+    <FIPS>3</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Sund</name>
+    <code>771</code>
+    <FIPS>2</FIPS>
+  </subcountry>
+  <subcountry>
+    <name>Vårdö</name>
+    <code>941</code>
+    <FIPS>3</FIPS>
+  </subcountry>
+</country>
+
+<country>
+  <name>Curaçao</name>
+  <code>CW</code>
+  <subcountry>
+    <name>Curaçao</name>
+    <code>CU</code>
+  </subcountry>
+</country>
+
+<country>
+  <name>French Polynesia</name>
+  <code>PF</code>
+  <subcountry>
+    <name>Clipperton Island</name>
+    <code>CI</code>
+  </subcountry>
+  <subcountry>
+    <name>Leeward Islands</name>
+    <code>LI</code>
+  </subcountry>
+  <subcountry>
+    <name>Marquesas Islands</name>
+    <code>MI</code>
+  </subcountry>
+  <subcountry>
+    <name>Tuamotu and Gambier Islands</name>
+    <code>TG</code>
+  </subcountry>
+  <subcountry>
+    <name>Tubuai Islands</name>
+    <code>TI</code>
+  </subcountry>
+  <subcountry>
+    <name>Windward Islands</name>
+    <code>WI</code>
+  </subcountry>
+</country>
+
+<country>
+  <name>Réunion</name>
+  <code>RE</code>
+  <subcountry>
+    <name>Saint-Benoît</name>
+    <code>BN</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint-Denis</name>
+    <code>DN</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint-Paul</name>
+    <code>PL</code>
+  </subcountry>
+  <subcountry>
+    <name>Saint-Pierre</name>
+    <code>PR</code>
+  </subcountry>
+</country>
+
+
 
 </ISO_3166_2>
 
