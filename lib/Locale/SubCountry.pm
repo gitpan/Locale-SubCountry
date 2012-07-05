@@ -1,6 +1,8 @@
+=encoding utf8
+
 =head1 NAME
 
-Locale::SubCountry - convert state, province, county etc. names to/from cISO 3166-2 codes
+Locale::SubCountry - Convert state, province, county etc. names to/from ISO 3166-2 codes
 
 =head1 SYNOPSIS
 
@@ -322,6 +324,8 @@ use Locale::SubCountry::Data;
 
 package Locale::SubCountry::World;
 
+our $VERSION = '1.53';
+
 # Define all the methods for the 'world' class here. Note that because the 
 # name space inherits from the Locale::SubCountry name space, the
 # package wide variables $::country_lookup and $Locale::SubCountry::subcountry_lookup are
@@ -376,8 +380,6 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-
-our $VERSION = '1.52';
 
 
 #-------------------------------------------------------------------------------
@@ -480,9 +482,7 @@ our $VERSION = '1.52';
                         }
                         else
                         {
-                            print "Badly formed sub country data in $country_name\n";
-                            print $current_line,"\n";
-                            die;
+                            die "Badly formed sub country data in $country_name\nData: $current_line\n";
                         }
                     }
                 }
@@ -501,9 +501,7 @@ our $VERSION = '1.52';
                 }
                 else
                 {
-                    print "Badly formed country data in $country_name\n";
-                    print $current_line,"\n";
-                    die;                    
+                    die "Badly formed country data in $country_name\nData: $current_line\n";                   
                 }
             }
         
