@@ -324,7 +324,7 @@ use Locale::SubCountry::Data;
 
 package Locale::SubCountry::World;
 
-our $VERSION = '1.53';
+our $VERSION = '1.54';
 
 # Define all the methods for the 'world' class here. Note that because the 
 # name space inherits from the Locale::SubCountry name space, the
@@ -380,6 +380,8 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
+
+our $VERSION = '1.54';
 
 
 #-------------------------------------------------------------------------------
