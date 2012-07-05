@@ -34,7 +34,7 @@ use warnings;
 use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.51';
+our $VERSION = '1.52';
 
 $Locale::SubCountry::Data::xml_data =
 q{
@@ -15185,6 +15185,18 @@ q{
     <FIPS>02</FIPS>
   </subcountry>
   <subcountry>
+    <name>Hela</name>
+    <code>HE</code>
+    <category>province</category>
+    <FIPS>02</FIPS>
+  </subcountry>
+    <subcountry>
+    <name>Jiwaka</name>
+    <code>JI</code>
+    <category>province</category>
+    <FIPS>02</FIPS>
+  </subcountry>
+  <subcountry>
     <name>Madang</name>
     <code>MPM</code>
     <category>province</category>
@@ -23266,7 +23278,7 @@ q{
     <FIPS>F3</FIPS>
   </subcountry>
   <subcountry>
-    <name>Aračinovo</name 
+    <name>Aračinovo</name>
     <code>2</code>
     <FIPS>01</FIPS>
   </subcountry>
@@ -23416,7 +23428,7 @@ q{
     <FIPS>40</FIPS>
   </subcountry>
   <subcountry>
-    <name>Karpoš/name>
+    <name>Karpoš</name>
     <code>38</code>
     <FIPS>41</FIPS>
   </subcountry>

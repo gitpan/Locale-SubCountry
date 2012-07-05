@@ -1,12 +1,12 @@
 #------------------------------------------------------------------------------
-# Test script for CPAN module Locale::SubCountry 
-#                                            
-# Author: Kim Ryan 
+# Test script for CPAN module Locale::SubCountry
+#
+# Author: Kim Ryan
 #------------------------------------------------------------------------------
 
 use strict;
 use warnings;
-use Test::Simple tests => 18;
+use Test::More tests => 18;
 use utf8;
 use Locale::SubCountry;
 

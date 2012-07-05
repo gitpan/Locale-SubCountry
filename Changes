@@ -1,5 +1,18 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.52 5 July 2012
+    Fixed xml tagging in Macedonian data,  fix for RT bug 78157
+    Minor updates to data
+    Use $ENV{AUTHOR_TESTING} for running POD tests, fix for RT bug 78123
+    Print message to STDERR (via call to die) on badly formed country and sub country data
+    
+    Thanks to Ron Savage for the following:
+    Use Test::More everywhere rather than Test::Simple sometimes.
+    Add t/test.t.
+    Clean up pre-reqs in Makefile.PL
+    Add Build.PL.
+    Add encoding to POD in Locale::SubCountry
+
 1.51 2 July 2012
     Many new countries added, thanks to Ron Savage
     Sub countries added to existing countires

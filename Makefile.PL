@@ -6,8 +6,17 @@ WriteMakefile
 (
     'NAME'         => 'Locale::SubCountry',
     'VERSION_FROM' => 'lib/Locale/SubCountry.pm',
-    'ABSTRACT'     => 'convert state, province, county ... names to/from ISO 3166-2 code',
+    'ABSTRACT'     => 'Convert state, province, county etc. names to/from ISO 3166-2 codes',
     'AUTHOR'       => 'Kim Ryan <kimryan at cpan org>',
-    'LICENSE'      => 'perl',   
-    'PREREQ_PM'    => {}, # e.g., Module::Name => 1.1
+    'LICENSE'      => 'perl',
+    'PREREQ_PM'    =>
+	{
+	locale              => 1.00,
+	strict              => 1.04,
+ 	Test::More          => 0.94,
+ 	Test::Pod           => 1.44,
+	Test::Pod::Coverage => 1.04,
+	utf8                => 1.09,
+	warnings            => 1.12,
+	},
 );
