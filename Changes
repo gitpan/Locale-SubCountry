@@ -1,5 +1,8 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.56 7 July 2012
+    Removed use of $ENV{AUTHOR_TESTING} for running POD tests, caused problems for CPAN testers
+
 1.55 5 July 2012
     Fixed xml tagging in Macedonian data,  fix for RT bug 78157
     Minor updates to data
