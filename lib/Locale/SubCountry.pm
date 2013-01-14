@@ -10,24 +10,24 @@ Locale::SubCountry - Convert state, province, county etc. names to/from ISO 3166
     my $UK = new Locale::SubCountry($country_code);
     if ( not $UK )
     {
-        die "Invalid code $country_code\n"; 
+        die "Invalid code $country_code\n";
     }
     elsif (  $UK->has_sub_countries )
     {
         print($UK->full_name('DGY'),"\n");           # Dumfries and Galloway
         print($UK->regional_division('DGY'),"\n");   # SCT (Scotland)
     }
-    
+
     my $australia = new Locale::SubCountry('Australia');
     if ( not $australia )
     {
-        die "Invalid code: Australia\n"; 
+        die "Invalid code: Australia\n";
     }
     else
     {
         print($australia->country,"\n");        # Australia
         print($australia->country_code,"\n");   # AU
-    
+
         if (  $australia->has_sub_countries )
         {
             print($australia->code('New South Wales '),"\n");     # NSW
@@ -37,25 +37,25 @@ Locale::SubCountry - Convert state, province, county etc. names to/from ISO 3166
             print($australia->category('NSW'),"\n");              # state
             print($australia->FIPS10_4_code('ACT'),"\n");         # 01
             print($australia->ISO3166_2_code('02'),"\n");         # NSW
-      
+
             my @aus_state_names  = $australia->all_full_names;
             my @aus_code_names   = $australia->all_codes;
             my %aus_states_keyed_by_code  = $australia->code_full_name_hash;
             my %aus_states_keyed_by_name  = $australia->full_name_code_hash;
-      
+
             foreach my $code ( sort keys %aus_states_keyed_by_code )
             {
                printf("%-3s : %s\n",$code,$aus_states_keyed_by_code{$code});
-            }   
+            }
         }
     }
-    
+
     # Methods for country codes and names
-    
+
     my $world = new Locale::SubCountry::World;
     my @all_countries     = $world->all_full_names;
     my @all_country_codes = $world->all_codes;
-    
+
     my %all_countries_keyed_by_name = $world->full_name_code_hash;
     my %all_country_keyed_by_code   = $world->code_full_name_hash;
 
@@ -76,7 +76,7 @@ returned as either a hash or an array.
 Names and ISO 3166-1 codes for all countries in the world can be
 returned as either a hash or an array.
 
-ISO 3166-2 codes can be converted to FIPS 10-4 codes. The reverse lookup can 
+ISO 3166-2 codes can be converted to FIPS 10-4 codes. The reverse lookup can
 also be done.
 
 =head1 METHODS
@@ -117,7 +117,7 @@ keyed by country code.
 
 =head2 all_full_names (for world objects)
 
-Given a world object, returns an array of all country full names, 
+Given a world object, returns an array of all country full names,
 sorted alphabetically.
 
 =head2 all_codes (for world objects)
@@ -154,15 +154,15 @@ Returns the current country of a sub country object, the format is title case
 
 =head2 country_code
 
-Given a sub country object, returns the two letter ISO 3166-1 code of the country  
+Given a sub country object, returns the two letter ISO 3166-1 code of the country
 
 
 =head2 code
 
-Given a sub country object, the C<code> method takes the full name of a sub 
+Given a sub country object, the C<code> method takes the full name of a sub
 country and returns the sub country's ISO 3166-2 code. The full name can appear
 in mixed case. All white space and non alphabetic characters are ignored, except
-the single space used to separate sub country names such as "New South Wales". 
+the single space used to separate sub country names such as "New South Wales".
 The code is returned as a capitalised string, or "unknown" if no match is found.
 
 =head2 full_name
@@ -179,31 +179,31 @@ returned as an upper cased string.
 
 Given a sub country object, the C<category> method takes the ISO 3166-2 code of
 a sub country and returns the sub country's category type. Examples are city,
-province,state and district. The category is returned as a capitalised string, 
+province,state and district. The category is returned as a capitalised string,
 or "unknown" if no match is found.
- 
+
 =head2 regional_division
 
-Given a sub country object, the C<regional_division> method takes the 
-ISO 3166-2 code of a sub country and returns the sub country's 
-regionional_division. This is, an alphanumeric code. The regional_division 
+Given a sub country object, the C<regional_division> method takes the
+ISO 3166-2 code of a sub country and returns the sub country's
+regionional_division. This is, an alphanumeric code. The regional_division
 is returned as a capitalised string,  or "unknown" if no match is found.
 
 =head2 has_sub_countries
 
 Given a sub country object, the C<has_sub_countries> method returns 1 if the
-current country has sub countries, or 0 if it does not. Some small countries 
+current country has sub countries, or 0 if it does not. Some small countries
 such as Singapore do not have sub countries.
 
 =head2 FIPS10_4_code
 
-Given a sub country object, the C<FIPS_10_4_code> method takes the ISO 3166-2 code 
+Given a sub country object, the C<FIPS_10_4_code> method takes the ISO 3166-2 code
 of a sub country and returns the sub country's FIPS 10-4 code, or the string 'unknown',
 if none exists. FIPS is a standard  developed by the US government.
 
 =head2 ISO3166_2_code
 
-Given a sub country object, the C<ISO3166_2_code> method takes the FIPS 10-4 code 
+Given a sub country object, the C<ISO3166_2_code> method takes the FIPS 10-4 code
 of a sub country and returns the sub country's ISO 3166-2 code, or the string 'unknown',
 if none exists.
 
@@ -233,16 +233,16 @@ sorted alphabetically. If the country has no sub countries, returns undef.
 
 =head1 SEE ALSO
 
-ISO 3166-1:1997 Codes for the representation of names of countries and their 
-subdivisions - Part 1: Country codes 
+ISO 3166-1:1997 Codes for the representation of names of countries and their
+subdivisions - Part 1: Country codes
 
-ISO 3166-2:1998 Codes for the representation of names of countries and their 
-subdivisions - Part 2: Country subdivision code 
+ISO 3166-2:1998 Codes for the representation of names of countries and their
+subdivisions - Part 2: Country subdivision code
 Also released as AS/NZS 2632.2:1999
 
 Federal Information Processing Standards Publication 10-4
-1995 April Specifications for  COUNTRIES, DEPENDENCIES, AREAS OF SPECIAL SOVEREIGNTY, 
-AND THEIR PRINCIPAL ADMINISTRATIVE DIVISIONS 
+1995 April Specifications for  COUNTRIES, DEPENDENCIES, AREAS OF SPECIAL SOVEREIGNTY,
+AND THEIR PRINCIPAL ADMINISTRATIVE DIVISIONS
 
 L<http://www.statoids.com/statoids.html>
 
@@ -254,9 +254,9 @@ L<Geo::StreetAddress::US>L<Geo::PostalAddress>L<Geo::IP>
 
 ISO 3166-2:1998 defines all sub country codes as being up to 3 letters and/or
 numbers. These codes are commonly accepted for countries like the USA
-and Canada. In Australia  this method of abbreviation is not widely accepted. 
-For example, the ISO code for 'New South Wales' is 'NS', but 'NSW' is the  
-abbreviation that is most commonly used. I could add a flag to enforce 
+and Canada. In Australia  this method of abbreviation is not widely accepted.
+For example, the ISO code for 'New South Wales' is 'NS', but 'NSW' is the
+abbreviation that is most commonly used. I could add a flag to enforce
 ISO-3166-2 codes if needed.
 
 The ISO 3166-2 standard romanizes the names of provinces and regions in non-latin
@@ -281,7 +281,7 @@ province and a geographical unit. Examples are:
     MOLDOVA    : Gngheni; UN,UGI
     MOZAMBIQUE : Maputo; MPM,L
 
-FIPS codes are not provided for all sub countries. 
+FIPS codes are not provided for all sub countries.
 
 
 =head1 AUTHOR
@@ -294,7 +294,7 @@ Locale::SubCountry was written by Kim Ryan <kimryan at cpan dot org>.
 Alastair McKinstry provided many of the sub country codes and names.
 
 Terrence Brannon produced Locale::US, which was the starting point for
-this module. 
+this module.
 
 Mark Summerfield and Guy Fraser provided the list of UK counties.
 
@@ -321,14 +321,14 @@ use Exporter;
 use Locale::SubCountry::Data;
 
 #-------------------------------------------------------------------------------
+# NOTE: version number defined below at start of package Locale::SubCountry
 
-our $VERSION = '1.56';
 
 package Locale::SubCountry::World;
 
-# Define all the methods for the 'world' class here. Note that because the 
+# Define all the methods for the 'world' class here. Note that because the
 # name space inherits from the Locale::SubCountry name space, the
-# package wide variables $::country_lookup and $Locale::SubCountry::subcountry_lookup are
+# package wide variables $SubCountry::country_lookup and $Locale::SubCountry::subcountry_lookup are
 # accessible.
 
 
@@ -380,6 +380,7 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
+our $VERSION = '1.57';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.
@@ -392,14 +393,14 @@ package Locale::SubCountry;
     {
       die "Could not locate Locale::SubCountry::Data::xml_data variable";
     }
-    
+
     # Get all the data from the Locale::SubCountryData pakage and place into an array of lines
     my @lines = split(/\n/,$Locale::SubCountry::Data::xml_data);
- 
+
     while ( @lines )
     {
         my $current_line = shift(@lines);
-       
+
         # Data is in XML format, use a simple parser to extract it
         my ($country_name,$country_code);
         if ( $current_line =~ /<country>/ )
@@ -447,17 +448,17 @@ package Locale::SubCountry;
                         }
                         elsif ( $current_line =~ /<\/subcountry>/ )
                         {
-                            
+
                             $sub_country_finished = 1;
-                            
+
                             # Some sub countries have no ISO code, such as Shariff Kabunsuan in the
                             # Phillipines. Only index sub country if it has a code
                             if ( defined $sub_country_code )
                             {
-                                # Insert into doubly indexed hash, grouped by country for ISO 3166-2 
-                                # codes. One hash is keyed by abbreviation and one by full name. Although 
+                                # Insert into doubly indexed hash, grouped by country for ISO 3166-2
+                                # codes. One hash is keyed by abbreviation and one by full name. Although
                                 # data is duplicated, this provides the fastest lookup and simplest code.
-                
+
                                 $Locale::SubCountry::subcountry_lookup{$country_name}{_code_keyed}{$sub_country_code} = $sub_country_name;
                                 $Locale::SubCountry::subcountry_lookup{$country_name}{_full_name_keyed}{$sub_country_name} = $sub_country_code;
                             }
@@ -466,7 +467,7 @@ package Locale::SubCountry;
                             {
                                 $Locale::SubCountry::subcountry_lookup{$country_name}{$sub_country_code}{_category} = $category;
                             }
-            
+
                             if ( $regional_division )
                             {
                                 $Locale::SubCountry::subcountry_lookup{$country_name}{$sub_country_code}{_regional_division} = $regional_division;
@@ -493,20 +494,20 @@ package Locale::SubCountry;
                     # The user can supply either form to create a new sub_country
                     # object, and the objects properties will hold both the countries
                     # name and it's code.
-    
+
                     $Locale::SubCountry::country_lookup{_code_keyed}{$country_code} = $country_name;
                     $Locale::SubCountry::country_lookup{_full_name_keyed}{$country_name} = $country_code;
 
                 }
                 else
                 {
-                    die "Badly formed country data in $country_name\nData: $current_line\n";                   
+                    die "Badly formed country data in $country_name\nData: $current_line\n";
                 }
             }
-        
+
         }
     }
-    
+
     # use Data::Dumper;
     # print Dumper(\%{ $Locale::SubCountry::subcountry_lookup{_full_name_keyed} });
     # die;
@@ -522,7 +523,7 @@ sub new
 
 
     my ($country,$country_code);
-    
+
 
     # Country may be supplied either as a two letter code, or the full name
     if ( length($country_or_code) == 2 )
@@ -727,7 +728,7 @@ sub full_name
     $code = _clean($code);
     $code = uc($code);
 
-    my $full_name = 
+    my $full_name =
         $Locale::SubCountry::subcountry_lookup{$sub_country->{_country}}{_code_keyed}{$code};
     if ( $uc_name )
     {
@@ -847,4 +848,3 @@ sub _clean
 }
 
 return(1);
-
