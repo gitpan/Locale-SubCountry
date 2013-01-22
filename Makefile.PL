@@ -14,7 +14,7 @@ WriteMakefile
 	locale              => 1.00,
 	strict              => 1.04,
  	Test::More          => 0.94,
- 	Test::Pod           => 1.44,
+ 	Test::Pod           => 1.04,
 	Test::Pod::Coverage => 1.04,
 	utf8                => 1.09,
 	warnings            => 1.12,

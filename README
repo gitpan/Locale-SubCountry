@@ -8,24 +8,24 @@ SYNOPSIS
     my $UK = new Locale::SubCountry($country_code);
     if ( not $UK )
     {
-        die "Invalid code $country_code\n"; 
+        die "Invalid code $country_code\n";
     }
     elsif (  $UK->has_sub_countries )
     {
         print($UK->full_name('DGY'),"\n");           # Dumfries and Galloway
         print($UK->regional_division('DGY'),"\n");   # SCT (Scotland)
     }
-    
+
     my $australia = new Locale::SubCountry('Australia');
     if ( not $australia )
     {
-        die "Invalid code: Australia\n"; 
+        die "Invalid code: Australia\n";
     }
     else
     {
         print($australia->country,"\n");        # Australia
         print($australia->country_code,"\n");   # AU
-    
+
         if (  $australia->has_sub_countries )
         {
             print($australia->code('New South Wales '),"\n");     # NSW
@@ -35,25 +35,25 @@ SYNOPSIS
             print($australia->category('NSW'),"\n");              # state
             print($australia->FIPS10_4_code('ACT'),"\n");         # 01
             print($australia->ISO3166_2_code('02'),"\n");         # NSW
-      
+
             my @aus_state_names  = $australia->all_full_names;
             my @aus_code_names   = $australia->all_codes;
             my %aus_states_keyed_by_code  = $australia->code_full_name_hash;
             my %aus_states_keyed_by_name  = $australia->full_name_code_hash;
-      
+
             foreach my $code ( sort keys %aus_states_keyed_by_code )
             {
                printf("%-3s : %s\n",$code,$aus_states_keyed_by_code{$code});
-            }   
+            }
         }
     }
-    
+
     # Methods for country codes and names
-    
+
     my $world = new Locale::SubCountry::World;
     my @all_countries     = $world->all_full_names;
     my @all_country_codes = $world->all_codes;
-    
+
     my %all_countries_keyed_by_name = $world->full_name_code_hash;
     my %all_country_keyed_by_code   = $world->code_full_name_hash;
 
@@ -83,7 +83,7 @@ returned as either a hash or an array.
 Names and ISO 3166-1 codes for all countries in the world can be
 returned as either a hash or an array.
 
-ISO 3166-2 codes can be converted to FIPS 10-4 codes. The reverse lookup can 
+ISO 3166-2 codes can be converted to FIPS 10-4 codes. The reverse lookup can
 also be done.
 
 
@@ -97,7 +97,7 @@ CREDITS
 Alastair McKinstry provided many of the sub country codes and names.
 
 Terrence Brannon produced Locale::US, which was the starting point for
-this module. 
+this module.
 
 Mark Summerfield and Guy Fraser provided the list of UK counties.
 
@@ -106,13 +106,7 @@ TJ Mather supplied the FIPS codes and many amendments to the sub country data
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2012 by Kim Ryan. All rights reserved.
+Copyright (C) 2013 by Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
-
-
-
-
-
-

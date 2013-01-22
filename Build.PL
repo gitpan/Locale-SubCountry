@@ -9,7 +9,7 @@ Module::Build -> new
  build_requires =>
  {
  	Test::More => 0.94,
- 	Test::Pod  => 1.44,
+ 	Test::Pod  => 1.04,
  },
  configure_requires =>
  {

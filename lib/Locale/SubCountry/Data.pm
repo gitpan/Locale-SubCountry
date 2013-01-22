@@ -1,3 +1,5 @@
+=encoding utf8
+
 =head1 NAME
 
 Locale::SubCountry::Data - data for Locale::SubCountry in XML format
@@ -19,7 +21,7 @@ Locale::SubCountry was written by Kim Ryan <kimryan at cpan dot org>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2012 Kim Ryan. All rights reserved.
+Copyright (c) 2013 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -34,7 +36,7 @@ use warnings;
 use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.56';
+our $VERSION = '1.58';
 
 $Locale::SubCountry::Data::xml_data =
 q{
@@ -60,7 +62,7 @@ q{
   <subcountry>
     <name>Sud</name>
     <code>SU</code>
-  </subcountry>  
+  </subcountry>
 </country>
 
 <country>
@@ -129,7 +131,7 @@ q{
   <subcountry>
     <name>Sonsorol</name>
     <code>370</code>
-  </subcountry>  
+  </subcountry>
 </country>
 
 <country>
@@ -170,7 +172,7 @@ q{
   <subcountry>
     <name>Serravalle</name>
     <code>9</code>
-  </subcountry>  
+  </subcountry>
 </country>
 
 <country>
@@ -243,7 +245,7 @@ q{
   <subcountry>
     <name></name>
     <code></code>
-  </subcountry>  
+  </subcountry>
 </country>
 
 <country>
@@ -283,9 +285,9 @@ q{
   <subcountry>
     <name>Vava'u</name>
     <code>05</code>
-  </subcountry>    
-</country>    
-    
+  </subcountry>
+</country>
+
 <country>
   <name>Isle of Man</name>
   <code>IM</code>
@@ -314,10 +316,10 @@ q{
     <code>RU</code>
   </subcountry>
 </country>
-  
+
 <country>
   <name>Jersey</name>
-  <code>JE</code> 
+  <code>JE</code>
   <subcountry>
     <name>Grouville</name>
     <code>GR</code>
@@ -1156,7 +1158,7 @@ q{
     <regional_division>SM</regional_division>
     <category>province</category>
     <FIPS>40</FIPS>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Lampung</name>
     <code>LA</code>
@@ -1202,7 +1204,7 @@ q{
     <code>PB</code>
     <regional_division>IJ</regional_division>
     <category>province</category>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Riau</name>
     <code>RI</code>
@@ -1230,7 +1232,7 @@ q{
     <regional_division>SR</regional_division>
     <category>province</category>
     <FIPS>41</FIPS>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Sulawesi Tenggara</name>
     <code>SG</code>
@@ -1319,7 +1321,7 @@ q{
   <subcountry>
     <name>Donegal</name>
     <code>DL</code>
-    <FIPS>06</FIPS>    
+    <FIPS>06</FIPS>
     <regional_division>U</regional_division>
   </subcountry>
   <subcountry>
@@ -1337,7 +1339,7 @@ q{
   <subcountry>
     <name>Kerry</name>
     <code>KY</code>
-    <FIPS>11</FIPS>    
+    <FIPS>11</FIPS>
     <regional_division>M</regional_division>
   </subcountry>
   <subcountry>
@@ -15543,7 +15545,7 @@ q{
     <code>MM</code>
     <regional_division>NCR</regional_division>
     <FIPS>9</FIPS>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Occidental Mindoro</name>
     <code>MDC</code>
@@ -17123,7 +17125,7 @@ q{
   <subcountry>
     <name>East Equatoria</name>
     <code>EE</code>
-    <FIPS>02</FIPS>    
+    <FIPS>02</FIPS>
   </subcountry>
   <subcountry>
     <name>Jungoli</name>
@@ -17154,17 +17156,17 @@ q{
     <name>Warap</name>
     <code>WR</code>
     <FIPS>08</FIPS>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>West Bahr-al-Ghazal</name>
     <code>BW</code>
     <FIPS>09</FIPS>
-  </subcountry> 
+  </subcountry>
   <subcountry>
     <name>West Equatoria</name>
     <code>EW</code>
     <FIPS>10</FIPS>
-  </subcountry>    
+  </subcountry>
 </country>
 
 
@@ -17205,7 +17207,7 @@ q{
     <name>Northern</name>
     <code>NO</code>
     <FIPS>43</FIPS>
-  </subcountry> 
+  </subcountry>
   <subcountry>
     <name>North Kordufan</name>
     <code>KN</code>
@@ -17245,7 +17247,7 @@ q{
     <name>White Nile</name>
     <code>NW</code>
     <FIPS>41</FIPS>
-  </subcountry>    
+  </subcountry>
 </country>
 
 <country>
@@ -20845,7 +20847,7 @@ q{
   <subcountry>
     <name>Braničevo</name>
     <code>BR</code>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Central Banat</name>
     <code>SD</code>
@@ -20857,7 +20859,7 @@ q{
   <subcountry>
     <name>Jablanica</name>
     <code>JA</code>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Kolubara</name>
     <code>KB</code>
@@ -20869,7 +20871,7 @@ q{
   <subcountry>
     <name>Kosovsko-Mitrovica</name>
     <code>KM</code>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Kosovsko-Pomoravlje</name>
     <code>KP</code>
@@ -20881,7 +20883,7 @@ q{
   <subcountry>
     <name>Morava</name>
     <code>MR</code>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Nišava</name>
     <code>NS</code>
@@ -20893,7 +20895,7 @@ q{
   <subcountry>
     <name>North Banat</name>
     <code>SN</code>
-  </subcountry>  
+  </subcountry>
   <subcountry>
     <name>Pčinja</name>
     <code>PC</code>
@@ -20953,7 +20955,7 @@ q{
   <subcountry>
     <name>Zlatibor</name>
     <code>ZL</code>
-  </subcountry>  
+  </subcountry>
 </country>
 
 <country>
@@ -20963,128 +20965,128 @@ q{
     <name>Andrijevica</name>
     <code>AN</code>
     <FIPS>01</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Bar</name>
     <code>BA</code>
     <FIPS>02</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Berane</name>
     <code>BE</code>
     <FIPS>03</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Bijelo Polje</name>
     <code>BP</code>
     <FIPS>04</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Budva</name>
     <code>BU</code>
     <FIPS>05</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Cetinje</name>
     <code>CE</code>
     <FIPS>06</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Danilovgrad</name>
     <code>DA</code>
     <FIPS>07</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Herceg Novi</name>
     <code>HN</code>
     <FIPS>08</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Kolašin</name>
     <code>KL</code>
     <FIPS>09</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Kotor</name>
     <code>KT</code>
     <FIPS>10</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Mojkovac</name>
     <code>MK</code>
     <FIPS>11</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Nikšić</name>
     <code>NK</code>
     <FIPS>12</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Plav</name>
     <code>PV</code>
     <FIPS>13</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Pljevlja</name>
     <code>PL</code>
     <FIPS>14</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Plužine</name>
     <code>PU</code>
     <FIPS>15</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Podgorica</name>
     <code>PG</code>
     <FIPS>16</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Rožaje</name>
     <code>RO</code>
     <FIPS>17</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Šavnik</name>
     <code>SA</code>
     <FIPS>18</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Tivat</name>
     <code>TI</code>
     <FIPS>19</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Ulcinj</name>
     <code>UL</code>
     <FIPS>20</FIPS>
-    <category>commune</category>    
+    <category>commune</category>
   </subcountry>
   <subcountry>
     <name>Žabljak</name>
     <code>ZA</code>
     <FIPS>21</FIPS>
-    <category>commune</category>    
-  </subcountry>  
+    <category>commune</category>
+  </subcountry>
 </country>
 
 <country>

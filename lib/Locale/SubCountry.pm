@@ -303,7 +303,7 @@ TJ Mather supplied the FIPS codes and many ammendments to the sub country data
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2012 Kim Ryan. All rights reserved.
+Copyright (c) 2013 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -380,7 +380,7 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-our $VERSION = '1.57';
+our $VERSION = '1.58';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.
