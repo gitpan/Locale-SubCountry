@@ -1,5 +1,8 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.59 22 Jan 2013
+    Added $VERSION variable into the Locale::SubCountry::World package
+
 1.58 22 Jan 2013
     Added '=encoding utf8' to Data.pm to allow POD formatters to work
     Changed minimimum required version of Test::Pod and Test::Pod::Coverage to 1.04, fix for RT bug 82717

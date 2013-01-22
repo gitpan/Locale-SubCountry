@@ -36,7 +36,7 @@ use warnings;
 use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.58';
+our $VERSION = '1.59';
 
 $Locale::SubCountry::Data::xml_data =
 q{

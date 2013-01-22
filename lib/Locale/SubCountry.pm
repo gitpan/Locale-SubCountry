@@ -321,10 +321,9 @@ use Exporter;
 use Locale::SubCountry::Data;
 
 #-------------------------------------------------------------------------------
-# NOTE: version number defined below at start of package Locale::SubCountry
-
 
 package Locale::SubCountry::World;
+our $VERSION = '1.59';
 
 # Define all the methods for the 'world' class here. Note that because the
 # name space inherits from the Locale::SubCountry name space, the
@@ -380,7 +379,7 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-our $VERSION = '1.58';
+our $VERSION = '1.59';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.
