@@ -1,5 +1,3 @@
-=encoding utf8
-
 =head1 NAME
 
 Locale::SubCountry - Convert state, province, county etc. names to/from ISO 3166-2 codes
@@ -68,7 +66,8 @@ can also be done. Sub country codes are defined in "ISO 3166-2:2007,
 Codes for the representation of names of countries and their subdivisions".
 
 Sub countries are termed as states in the US and Australia, provinces
-in Canada and counties in the UK and Ireland.
+in Canada and counties in the UK and Ireland. Ohter terms include region,
+department, city and territory.
 
 Names and ISO 3166-2 codes for all sub countries in a country can be
 returned as either a hash or an array.
@@ -197,6 +196,10 @@ such as Singapore do not have sub countries.
 
 =head2 FIPS10_4_code
 
+NOTE: On September 2, 2008, FIPS 10-4 was one of ten standards withdrawn by NIST as a
+Federal Information Processing Standard. It may not be supported by this module in
+the future.
+
 Given a sub country object, the C<FIPS_10_4_code> method takes the ISO 3166-2 code
 of a sub country and returns the sub country's FIPS 10-4 code, or the string 'unknown',
 if none exists. FIPS is a standard  developed by the US government.
@@ -233,10 +236,14 @@ sorted alphabetically. If the country has no sub countries, returns undef.
 
 =head1 SEE ALSO
 
-ISO 3166-1:1997 Codes for the representation of names of countries and their
+L<Locale::Country>,L<Lingua::EN::AddressParse>,
+L<Geo::StreetAddress::US>,L<Geo::PostalAddress>,L<Geo::IP>
+L<WWW::Scraper::Wikipedia::ISO3166> for obtaining ISO 3166-2 data
+
+ISO 3166-1:2007 Codes for the representation of names of countries and their
 subdivisions - Part 1: Country codes
 
-ISO 3166-2:1998 Codes for the representation of names of countries and their
+ISO 3166-2:2007 Codes for the representation of names of countries and their
 subdivisions - Part 2: Country subdivision code
 Also released as AS/NZS 2632.2:1999
 
@@ -244,15 +251,15 @@ Federal Information Processing Standards Publication 10-4
 1995 April Specifications for  COUNTRIES, DEPENDENCIES, AREAS OF SPECIAL SOVEREIGNTY,
 AND THEIR PRINCIPAL ADMINISTRATIVE DIVISIONS
 
-L<http://www.statoids.com/statoids.html>
+L<http://www.statoids.com/statoids.html> is a good source for sub country codes plus
+other statistical data.
 
 
-L<Locale::Country>,L<Lingua::EN::AddressParse>,
-L<Geo::StreetAddress::US>L<Geo::PostalAddress>L<Geo::IP>
+
 
 =head1 LIMITATIONS
 
-ISO 3166-2:1998 defines all sub country codes as being up to 3 letters and/or
+ISO 3166-2:2007 defines all sub country codes as being up to 3 letters and/or
 numbers. These codes are commonly accepted for countries like the USA
 and Canada. In Australia  this method of abbreviation is not widely accepted.
 For example, the ISO code for 'New South Wales' is 'NS', but 'NSW' is the
@@ -291,6 +298,8 @@ Locale::SubCountry was written by Kim Ryan <kimryan at cpan dot org>.
 
 =head1 CREDITS
 
+Ron Savage for many corrections to the data
+
 Alastair McKinstry provided many of the sub country codes and names.
 
 Terrence Brannon produced Locale::US, which was the starting point for
@@ -323,7 +332,7 @@ use Locale::SubCountry::Data;
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry::World;
-our $VERSION = '1.59';
+our $VERSION = '1.60';
 
 # Define all the methods for the 'world' class here. Note that because the
 # name space inherits from the Locale::SubCountry name space, the
@@ -379,12 +388,12 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-our $VERSION = '1.59';
+our $VERSION = '1.60';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.
 # Read in the list of abbreviations and full names defined in the
-# Locale::SubCountryData package
+# Locale::SubCountry::Data package
 
 {
 
@@ -404,7 +413,7 @@ our $VERSION = '1.59';
         my ($country_name,$country_code);
         if ( $current_line =~ /<country>/ )
         {
-            # start of a  /<country> .. </country> block
+            # start of a  <country> .. </country> block
             my $country_finished = 0;
             until ( $country_finished )
             {
@@ -479,9 +488,9 @@ our $VERSION = '1.59';
                                 $Locale::SubCountry::subcountry_lookup{$country_name}{_ISO3166_2_code_keyed}{$sub_country_code} = $FIPS_code;
                             }
                         }
-                        else
+                        elsif ( $current_line =~ /\w.*/ )
                         {
-                            die "Badly formed sub country data in $country_name\nData: $current_line\n";
+                            die "Badly formed XML sub country data in $country_name\nData: $current_line\n";
                         }
                     }
                 }
@@ -498,18 +507,13 @@ our $VERSION = '1.59';
                     $Locale::SubCountry::country_lookup{_full_name_keyed}{$country_name} = $country_code;
 
                 }
-                else
+                elsif ( $current_line =~ /\w.*/ )
                 {
-                    die "Badly formed country data in $country_name\nData: $current_line\n";
+                    die "Badly formed XML country data in $country_name\nData: $current_line\n";
                 }
             }
-
         }
     }
-
-    # use Data::Dumper;
-    # print Dumper(\%{ $Locale::SubCountry::subcountry_lookup{_full_name_keyed} });
-    # die;
 }
 
 #-------------------------------------------------------------------------------

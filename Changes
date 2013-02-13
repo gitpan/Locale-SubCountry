@@ -1,5 +1,18 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.60 13 Feb 2013
+
+    NOTE: On September 2, 2008, FIPS 10-4 was one of ten standards withdrawn by NIST as a
+    Federal Information Processing Standard. FIPS data will remain in this module for now.
+    I may need to withdraw it if it becomes too difficult to align FIPS data with updates to ISO data
+
+    Added FIPS data to several countries
+    Added Communities to Spain
+    Added Italian regions
+    Allowed for blank lines within subcountry XML data
+    Added FIPS codes to many countries
+    Removed POD utf encoding directive from SubCountry.pm (only needed in Data.pm), fix for RT bug 82933
+
 1.59 22 Jan 2013
     Added $VERSION variable into the Locale::SubCountry::World package
 
@@ -29,9 +42,9 @@ Revision history for Perl CPAN module Locale::SubCountry
 
 1.51 2 July 2012
     Many new countries added, thanks to Ron Savage
-    Sub countries added to existing countires
+    Sub countries added to existing countries
     Many corrections to sub country data
-    Changed to all  lower case for the spelling of 'and', 'of' 'the' etc that may occur in names
+    Changed to all lower case for the spelling of 'and', 'of' 'the' etc that may occur in names
     Added 'use utf8' to main.t
 
 
