@@ -1,3 +1,5 @@
+=encoding utf8
+
 =head1 NAME
 
 Locale::SubCountry - Convert state, province, county etc. names to/from ISO 3166-2 codes
@@ -332,7 +334,7 @@ use Locale::SubCountry::Data;
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry::World;
-our $VERSION = '1.60';
+our $VERSION = '1.61';
 
 # Define all the methods for the 'world' class here. Note that because the
 # name space inherits from the Locale::SubCountry name space, the
@@ -388,7 +390,7 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-our $VERSION = '1.60';
+our $VERSION = '1.61';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.

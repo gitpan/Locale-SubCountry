@@ -38,15 +38,15 @@
    "provides" : {
       "Locale::SubCountry" : {
          "file" : "lib/Locale/SubCountry.pm",
-         "version" : "1.60"
+         "version" : "1.61"
       },
       "Locale::SubCountry::Data" : {
          "file" : "lib/Locale/SubCountry/Data.pm",
-         "version" : "1.60"
+         "version" : "1.61"
       },
       "Locale::SubCountry::World" : {
          "file" : "lib/Locale/SubCountry.pm",
-         "version" : "1.60"
+         "version" : "1.61"
       }
    },
    "release_status" : "stable",
@@ -55,5 +55,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "1.60"
+   "version" : "1.61"
 }

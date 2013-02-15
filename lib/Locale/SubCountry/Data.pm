@@ -36,7 +36,7 @@ use warnings;
 use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.60';
+our $VERSION = '1.61';
 
 $Locale::SubCountry::Data::xml_data =
 q{
@@ -9456,6 +9456,7 @@ q{
   <subcountry>
     <name>Berlin</name>
     <code>BE</code>
+    <FIPS>16</FIPS>
   </subcountry>
   <subcountry>
     <name>Brandenburg</name>

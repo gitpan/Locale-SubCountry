@@ -1,5 +1,9 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.61 15 Feb 2013
+    Small correction for German data
+    Replaced POD utf encoding directive in SubCountry.pm as some accented characters occur in the POD
+
 1.60 13 Feb 2013
 
     NOTE: On September 2, 2008, FIPS 10-4 was one of ten standards withdrawn by NIST as a
