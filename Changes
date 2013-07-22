@@ -1,5 +1,10 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.62 23 Jul 2013
+    Removed POD utf encoding directive from SubCountry.pm again and removed utf8
+    characters from the POD section. They are still causing errors on selected
+    platfroms and versions of Perl. Replaced with ASCII text. Fix for RT bug 71228
+
 1.61 15 Feb 2013
     Small correction for German data
     Replaced POD utf encoding directive in SubCountry.pm as some accented characters occur in the POD

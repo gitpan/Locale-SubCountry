@@ -8,7 +8,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.38
 dynamic_config: 1
-generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,13 +17,13 @@ name: Locale-SubCountry
 provides:
   Locale::SubCountry:
     file: lib/Locale/SubCountry.pm
-    version: 1.61
+    version: 1.62
   Locale::SubCountry::Data:
     file: lib/Locale/SubCountry/Data.pm
-    version: 1.61
+    version: 1.62
   Locale::SubCountry::World:
     file: lib/Locale/SubCountry.pm
-    version: 1.61
+    version: 1.62
 requires:
   Test::Pod::Coverage: 1.04
   locale: 1
@@ -32,4 +32,4 @@ requires:
   warnings: 1.12
 resources:
   license: http://dev.perl.org/licenses/
-version: 1.61
+version: 1.62

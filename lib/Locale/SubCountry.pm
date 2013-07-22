@@ -1,5 +1,3 @@
-=encoding utf8
-
 =head1 NAME
 
 Locale::SubCountry - Convert state, province, county etc. names to/from ISO 3166-2 codes
@@ -277,8 +275,8 @@ the correct code for that sub country. These entries are usually duplicated
 because the name represents two different types of sub country, such as a
 province and a geographical unit. Examples are:
 
-    AZERBAIJAN : Länkäran; LA (the City), LAN (the Rayon)
-    AZERBAIJAN : Säki; SA,SAK
+    AZERBAIJAN : Lankaran; LA (the City), LAN (the Rayon) [see note]
+    AZERBAIJAN : Saki; SA,SAK [see note]
     AZERBAIJAN : Susa; SS,SUS
     AZERBAIJAN : Yevlax; YE,YEV
     INDONESIA  : Kalimantan Timur; KI,KT
@@ -289,6 +287,11 @@ province and a geographical unit. Examples are:
     MOLDOVA    : Coroca; SO,SOA
     MOLDOVA    : Gngheni; UN,UGI
     MOZAMBIQUE : Maputo; MPM,L
+
+Note: these names are spelt with a diaeresis character (two dots) above
+some of the 'a' characters. This causes utf8 errors on some versions
+of Perl, so they are omitted here. See the Locale::SubCountry::Data module
+for correct spelling
 
 FIPS codes are not provided for all sub countries.
 
@@ -334,7 +337,7 @@ use Locale::SubCountry::Data;
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry::World;
-our $VERSION = '1.61';
+our $VERSION = '1.62';
 
 # Define all the methods for the 'world' class here. Note that because the
 # name space inherits from the Locale::SubCountry name space, the
@@ -390,7 +393,7 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-our $VERSION = '1.61';
+our $VERSION = '1.62';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.
