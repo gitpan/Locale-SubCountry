@@ -1,5 +1,10 @@
 Revision history for Perl CPAN module Locale::SubCountry
 
+1.63 9 Apr 2014
+    Check that a country has sub countries before searching for code and full name, fix for RT bug 89706
+    Remove minuimum versions for utf8 and strict modules, fix for RT bug 92587
+
+
 1.62 23 Jul 2013
     Removed POD utf encoding directive from SubCountry.pm again and removed utf8
     characters from the POD section. They are still causing errors on selected

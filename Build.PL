@@ -18,9 +18,9 @@ Module::Build -> new
  requires =>
  {
 	locale              => 1.00,
-	strict              => 1.04,
+	strict              => 0,
 	Test::Pod::Coverage => 1.04,
-	utf8                => 1.09,
-	warnings            => 1.12,
+	utf8                => 0,
+	warnings            => 0,
  },
 ) -> create_build_script();

@@ -66,7 +66,7 @@ can also be done. Sub country codes are defined in "ISO 3166-2:2007,
 Codes for the representation of names of countries and their subdivisions".
 
 Sub countries are termed as states in the US and Australia, provinces
-in Canada and counties in the UK and Ireland. Ohter terms include region,
+in Canada and counties in the UK and Ireland. Other terms include region,
 department, city and territory.
 
 Names and ISO 3166-2 codes for all sub countries in a country can be
@@ -317,7 +317,7 @@ TJ Mather supplied the FIPS codes and many ammendments to the sub country data
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2013 Kim Ryan. All rights reserved.
+Copyright (c) 2014 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -337,7 +337,7 @@ use Locale::SubCountry::Data;
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry::World;
-our $VERSION = '1.62';
+our $VERSION = '1.63';
 
 # Define all the methods for the 'world' class here. Note that because the
 # name space inherits from the Locale::SubCountry name space, the
@@ -393,7 +393,7 @@ sub all_codes
 #-------------------------------------------------------------------------------
 
 package Locale::SubCountry;
-our $VERSION = '1.62';
+our $VERSION = '1.63';
 
 #-------------------------------------------------------------------------------
 # Initialization code must be run first to create global data structure.
@@ -598,6 +598,12 @@ sub code
     my $sub_country = shift;
     my ($full_name) = @_;
 
+    unless ( $sub_country->has_sub_countries )
+    {
+        # this country has no sub countries
+        return;
+    }
+
     my $orig = $full_name;
 
     $full_name = _clean($full_name);
@@ -732,6 +738,12 @@ sub full_name
 {
     my $sub_country = shift;
     my ($code,$uc_name) = @_;
+
+    unless ( $sub_country->has_sub_countries )
+    {
+        # this country has no sub countries
+        return;
+    }
 
     $code = _clean($code);
     $code = uc($code);

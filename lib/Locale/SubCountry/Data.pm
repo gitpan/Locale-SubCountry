@@ -21,7 +21,7 @@ Locale::SubCountry was written by Kim Ryan <kimryan at cpan dot org>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2013 Kim Ryan. All rights reserved.
+Copyright (c) 2014 Kim Ryan. All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -36,7 +36,7 @@ use warnings;
 use utf8;
 package Locale::SubCountry::Data;
 
-our $VERSION = '1.62';
+our $VERSION = '1.63';
 
 $Locale::SubCountry::Data::xml_data =
 q{
